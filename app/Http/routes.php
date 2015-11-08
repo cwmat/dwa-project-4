@@ -11,6 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+ * Index - Content/home page
+ */
+Route::controller('/', 'ContentController', [
+  // 'getLoremIpsumGenerator' => 'tools.getLorem',
+  // 'getRandomUserGenerator' => 'tools.getUser',
+  // 'postLoremIpsumGenerator' => 'tools.postLorem',
+  // 'postRandomUserGenerator' => 'tools.postUser',
+]);
+//
+// /*
+//  * User pages (login, register, control panel)
+//  */
+// Route::controller('/user', 'UserController', [
+//   // 'getLoremIpsumGenerator' => 'tools.getLorem',
+//   // 'getRandomUserGenerator' => 'tools.getUser',
+//   // 'postLoremIpsumGenerator' => 'tools.postLorem',
+//   // 'postRandomUserGenerator' => 'tools.postUser',
+// ]);
+//
+// /*
+//  * Contact page
+//  */
+// Route::controller('/contact', 'ContactController', [
+//   // 'getLoremIpsumGenerator' => 'tools.getLorem',
+//   // 'getRandomUserGenerator' => 'tools.getUser',
+//   // 'postLoremIpsumGenerator' => 'tools.postLorem',
+//   // 'postRandomUserGenerator' => 'tools.postUser',
+// ]);
