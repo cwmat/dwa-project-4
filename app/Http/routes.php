@@ -14,27 +14,21 @@
 /*
  * Index - Content/home page
  */
-Route::controller('/', 'ContentController', []);//, [
-  // 'getLoremIpsumGenerator' => 'tools.getLorem',
-  // 'getRandomUserGenerator' => 'tools.getUser',
-  // 'postLoremIpsumGenerator' => 'tools.postLorem',
-  // 'postRandomUserGenerator' => 'tools.postUser',
-//]);
+Route::get('/', 'ContentController@getIndex');
 
 /*
  * User pages (login, register, control panel)
  */
-Route::controller('/user', 'UserController', []);
+Route::get('/user', 'UserController@getIndex');
+Route::get('/user/login', 'UserController@getLogin');
+Route::post('/user/login', 'UserController@postLogin');
+Route::get('/user/register', 'UserController@getRegister');
+Route::post('/user/register', 'UserController@postRegister');
 
 /*
  * Contact page
  */
-Route::controller('/contact', 'ContactController', [
-  // 'getLoremIpsumGenerator' => 'tools.getLorem',
-  // 'getRandomUserGenerator' => 'tools.getUser',
-  // 'postLoremIpsumGenerator' => 'tools.postLorem',
-  // 'postRandomUserGenerator' => 'tools.postUser',
-]);
+Route::get('/contact', 'ContactController@getIndex');
 
 /*
  * Log viewer
