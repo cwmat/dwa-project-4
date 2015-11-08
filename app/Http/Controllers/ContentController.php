@@ -16,8 +16,10 @@ class ContentController extends Controller
      */
     public function getIndex()
     {
-        return view('layouts.master');
+        return view('content.content');
     }
+
+    // Add filter route
 
 
 

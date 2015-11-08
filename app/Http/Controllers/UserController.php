@@ -14,10 +14,123 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getIndex()
     {
-        //
+      // Reroute to login page or user control panel as "/user/" shouldn't actually have any content
+      // Add logic to check if a user is logged in
+      // For now just link to users.login
+        return view('user.login');
     }
+
+    /**
+     * Take the user to the login screen.  Should check if the user is already logged in then should be prompted to either logout or go to control panel.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLogin()
+    {
+      // Add logic to check if a user is logged in
+        return view('user.login');
+    }
+
+    /**
+     * Input login information.  Should check if the user is already logged in then should be prompted to either logout or go to control panel.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function postLogin()
+    {
+      // Add logic to check if a user is logged in
+        return view('user.login');
+    }
+
+    /**
+     * Register a new user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getRegister()
+    {
+      // Add logic to check if a user is logged in
+        return view('user.register');
+    }
+
+    /**
+     * Register a new user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function postRegister()
+    {
+      // Add logic to check if a user is logged in
+        return view('user.register');
+    }
+
+    // Route for {user_id}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
