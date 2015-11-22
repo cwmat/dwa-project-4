@@ -26,6 +26,7 @@ class CreateBlogsTable extends Migration
         $table->string('title');
         $table->text('content');
         $table->string('image');
+        // link
         // poster
         // comments
         // tags

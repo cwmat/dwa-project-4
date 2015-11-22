@@ -22,6 +22,32 @@ class UserController extends Controller
         return view('user.login');
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * Take the user to the login screen.  Should check if the user is already logged in then should be prompted to either logout or go to control panel.
      *

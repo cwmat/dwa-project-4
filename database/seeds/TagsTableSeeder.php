@@ -11,6 +11,14 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+      // Initial tags
+      $initialTags = ['food', 'funny', 'animals', 'news', 'games', 'movies', 'science', 'sports', 'music', 'books', 'technology', 'gif', 'video', 'text', 'image'];
+
+      // Cycle through initial tag names and add them to the tags table
+      foreach ($initialTags as $tagName) {
+        $tag = new \App\Tag();
+        $tag->name = $tagName;
+        $tag->save();
+      }
     }
 }

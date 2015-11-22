@@ -18,10 +18,10 @@ class ConnectUsersAndBlogs extends Migration
 
     public function down()
     {
-        Schema::table('books', function (Blueprint $table) {
+        Schema::table('blogs', function (Blueprint $table) {
 
             # http://laravel.com/docs/5.1/migrations#dropping-indexes
-            # combine tablename + fk field name + the word "foreign" - weird...
+            # combine tablename + FK field name + the word "foreign" - weird...
             $table->dropForeign('blogs_user_id_foreign');
 
             $table->dropColumn('user_id');
