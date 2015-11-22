@@ -9,17 +9,20 @@ use App\Http\Controllers\Controller;
 
 class ContentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getIndex()
-    {
-        return view('content.content');
-    }
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function getIndex()
+  {
+    // Query blog posts and order by updated at timestamp
+    $blogs = \App\Blog::orderBy('updated_at','ASC')->get();
 
-    // Add filter route
+    return view('content.content')->with('blogs', $blogs);
+  }
+
+  // Add filter route
 
 
 

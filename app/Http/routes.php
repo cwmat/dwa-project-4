@@ -19,11 +19,28 @@ Route::get('/', 'ContentController@getIndex');
 /*
  * User pages (login, register, control panel)
  */
+// Add auth group
 Route::get('/user', 'UserController@getIndex');
+//
+
+// Move to auth
 Route::get('/user/login', 'UserController@getLogin');
 Route::post('/user/login', 'UserController@postLogin');
 Route::get('/user/register', 'UserController@getRegister');
 Route::post('/user/register', 'UserController@postRegister');
+//
+
+/*
+ * Blog pages (editing and posting)
+ */
+Route::get('/blog', 'BlogController@getIndex');
+
+// Add auth group
+Route::get('/blog/create', 'BlogController@getCreate');
+Route::post('/blog/create', 'BlogController@postCreate');
+Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
+Route::post('/blog/edit', 'BlogController@postEdit');
+//
 
 /*
  * Contact page

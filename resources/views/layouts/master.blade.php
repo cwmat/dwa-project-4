@@ -41,10 +41,10 @@ Sources:
   </title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="bower/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href= {{ asset('bower/bootstrap/dist/css/bootstrap.min.css') }} rel="stylesheet">
 
   <!-- Themes and Custom CSS -->
-  <link href="css/theme.css" rel="stylesheet">
+  <link href= {{ asset('css/theme.css') }} rel="stylesheet">
   <link rel="stylesheet" href= {{ asset('css/main.css') }} >
   {{-- Yield any page specific header content --}}
   @yield('head')

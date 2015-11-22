@@ -1,0 +1,8 @@
+/* Overwrite bootstrap image selector to add properties */
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+
+}
+
+.post-preview img .img-responsive .blog-image {
+  max-width: 5em;
+}
