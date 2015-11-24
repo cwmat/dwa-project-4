@@ -1,0 +1,1298 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>bootstrap-tagsinput/bootstrap-tagsinput · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="bootstrap-tagsinput/bootstrap-tagsinput" name="twitter:title" /><meta content="bootstrap-tagsinput - jQuery tags input plugin based on Twitter Bootstrap." name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/8333415?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/8333415?v=3&amp;s=400" property="og:image" /><meta content="bootstrap-tagsinput/bootstrap-tagsinput" property="og:title" /><meta content="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput" property="og:url" /><meta content="bootstrap-tagsinput - jQuery tags input plugin based on Twitter Bootstrap." property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="46AE8C7E:19DD:9593976:5654EF21" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location" />
+<meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event" />
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+    <meta class="js-ga-set" name="dimension4" content="Current repo nav">
+
+
+
+
+    <meta name="is-dotcom" content="true">
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="e6994349485e494da8b98f1484fbff801896f819" name="form-nonce" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-3698fb0adc53fda9a2672a02c3fa3b20b89480f2a47ce38216b21cf3eb5b4750.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-84f5bb59141e497516d920891b2b4b9546f973becc8d7a34706b8ad2d556ef40.css" media="all" rel="stylesheet" />
+    
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="efef53cedb8e9d707a094b7ee9bb1be4">
+
+      
+  <meta name="description" content="bootstrap-tagsinput - jQuery tags input plugin based on Twitter Bootstrap.">
+  <meta name="go-import" content="github.com/bootstrap-tagsinput/bootstrap-tagsinput git https://github.com/bootstrap-tagsinput/bootstrap-tagsinput.git">
+
+  <meta content="8333415" name="octolytics-dimension-user_id" /><meta content="bootstrap-tagsinput" name="octolytics-dimension-user_login" /><meta content="11534941" name="octolytics-dimension-repository_id" /><meta content="bootstrap-tagsinput/bootstrap-tagsinput" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="11534941" name="octolytics-dimension-repository_network_root_id" /><meta content="bootstrap-tagsinput/bootstrap-tagsinput" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/commits/master.atom" rel="alternate" title="Recent Commits to bootstrap-tagsinput:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out   env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      
+      <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="btn" href="/login?return_to=%2Fbootstrap-tagsinput%2Fbootstrap-tagsinput" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/bootstrap-tagsinput/bootstrap-tagsinput/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/bootstrap-tagsinput/bootstrap-tagsinput/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      aria-label="Search this repository"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/pricing" data-ga-click="(Logged out) Header, go to pricing, text:pricing">Pricing</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/WebPage">
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+
+      <div class="container">
+
+        <div class="clearfix">
+          
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fbootstrap-tagsinput%2Fbootstrap-tagsinput"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="/bootstrap-tagsinput/bootstrap-tagsinput/watchers">
+    76
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fbootstrap-tagsinput%2Fbootstrap-tagsinput"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/bootstrap-tagsinput/bootstrap-tagsinput/stargazers">
+      1,454
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fbootstrap-tagsinput%2Fbootstrap-tagsinput"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+
+    <a href="/bootstrap-tagsinput/bootstrap-tagsinput/network" class="social-count">
+      512
+    </a>
+  </li>
+</ul>
+
+          <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span class="mega-octicon octicon-repo"></span>
+  <span class="author"><a href="/bootstrap-tagsinput" class="url fn" itemprop="url" rel="author"><span itemprop="title">bootstrap-tagsinput</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/bootstrap-tagsinput/bootstrap-tagsinput" data-pjax="#js-repo-pjax-container">bootstrap-tagsinput</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+  </span>
+
+</h1>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation">
+        <div class="repository-sidebar clearfix">
+          
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/bootstrap-tagsinput/bootstrap-tagsinput/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/bootstrap-tagsinput/bootstrap-tagsinput" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /bootstrap-tagsinput/bootstrap-tagsinput">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="/bootstrap-tagsinput/bootstrap-tagsinput/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /bootstrap-tagsinput/bootstrap-tagsinput/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="/bootstrap-tagsinput/bootstrap-tagsinput/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /bootstrap-tagsinput/bootstrap-tagsinput/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/bootstrap-tagsinput/bootstrap-tagsinput/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /bootstrap-tagsinput/bootstrap-tagsinput/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/bootstrap-tagsinput/bootstrap-tagsinput/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /bootstrap-tagsinput/bootstrap-tagsinput/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+            <div class="only-with-full-nav">
+                
+<div class="js-clone-url clone-url open"
+  data-protocol-type="http">
+  <h3 class="text-small text-muted"><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput.git" readonly="readonly" aria-label="HTTPS clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url "
+  data-protocol-type="subversion">
+  <h3 class="text-small text-muted"><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput" readonly="readonly" aria-label="Subversion checkout URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="clone-options text-small text-muted">You can clone with
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" class="inline-form js-clone-selector-form " data-form-nonce="e6994349485e494da8b98f1484fbff801896f819" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="c1uJx/toA7cKA0AOY+PkpY266vmRK2RI/WconaeyZFe7TOe0Xhje8B5ogL1xLYWgRcwu2NeSFGcsR9P9zIbERg==" /></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form> or <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" class="inline-form js-clone-selector-form " data-form-nonce="e6994349485e494da8b98f1484fbff801896f819" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="B2hTn+7GnXf03FOXl6JuotGYUyc71OF0+sX9ERsza3BjGfWM5bH5esDUBVGf4ufX/bBf1BZxOJHN9t3hunb4aA==" /></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</div>
+
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/archive/master.zip"
+                 class="btn btn-sm sidebar-button"
+                 aria-label="Download the contents of bootstrap-tagsinput/bootstrap-tagsinput as a zip file"
+                 title="Download the contents of bootstrap-tagsinput/bootstrap-tagsinput as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div>
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+
+          
+<span id="js-show-full-navigation"></span>
+
+  <div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      jQuery tags input plugin based on Twitter Bootstrap.
+    </div>
+
+    <div class="repository-website">
+      <a href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/" rel="nofollow">http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/</a>
+    </div>
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/bootstrap-tagsinput/bootstrap-tagsinput/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              335
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/bootstrap-tagsinput/bootstrap-tagsinput/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            5
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/bootstrap-tagsinput/bootstrap-tagsinput/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            30
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      49
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">94.1%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/search?l=html">
+                <span class="color-block language-color" style="background-color:#e44b23;"></span>
+                <span class="lang">HTML</span>
+                <span class="percent">5.9%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="JavaScript 94.1%" style="width:94.1%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+    <span class="language-color" aria-label="HTML 5.9%" style="width:5.9%; background-color:#e44b23;" itemprop="keywords">HTML</span>
+  </div>
+
+<include-fragment src="/bootstrap-tagsinput/bootstrap-tagsinput/show_partial?partial=tree%2Frecently_touched_branches_list"></include-fragment>
+
+  <div class="file-navigation in-mid-page">
+  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/find/master"
+        class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s right"
+        data-pjax
+        data-hotkey="t"
+        aria-label="Quickly jump between files"
+        data-ga-click="Repository, find file, location:repo overview">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+
+    <a href="/bootstrap-tagsinput/bootstrap-tagsinput/compare" aria-label="Compare, review, create a pull request" class="btn btn-sm btn-primary tooltipped tooltipped-se left compare-button" aria-label="Compare &amp; review" data-pjax data-ga-click="Repository, go to compare view, location:repo overview; icon:git-compare">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/build-0.7.0"
+               data-name="build-0.7.0"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="build-0.7.0">
+                build-0.7.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/develop"
+               data-name="develop"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="develop">
+                develop
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/gh-pages"
+               data-name="gh-pages"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="gh-pages">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/latest"
+               data-name="latest"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="latest">
+                latest
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.7.1"
+                 data-name="0.7.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.7.1">0.7.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.7.0"
+                 data-name="0.7.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.7.0">0.7.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.6.1"
+                 data-name="0.6.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.6.1">0.6.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.6.0"
+                 data-name="0.6.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.6.0">0.6.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.5.0"
+                 data-name="0.5.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.5.0">0.5.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.5"
+                 data-name="0.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.5">0.5</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.4.2"
+                 data-name="0.4.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.4.2">0.4.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.4.1"
+                 data-name="0.4.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.4.1">0.4.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.4"
+                 data-name="0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.4">0.4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.14"
+                 data-name="0.3.14"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.14">0.3.14</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.13"
+                 data-name="0.3.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.13">0.3.13</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.12"
+                 data-name="0.3.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.12">0.3.12</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.11"
+                 data-name="0.3.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.11">0.3.11</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.10"
+                 data-name="0.3.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.10">0.3.10</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.9"
+                 data-name="0.3.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.9">0.3.9</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.8"
+                 data-name="0.3.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.8">0.3.8</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.7"
+                 data-name="0.3.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.7">0.3.7</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.6"
+                 data-name="0.3.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.6">0.3.6</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.5"
+                 data-name="0.3.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.5">0.3.5</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.4"
+                 data-name="0.3.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.4">0.3.4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.3"
+                 data-name="0.3.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.3">0.3.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.2"
+                 data-name="0.3.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.2">0.3.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.1"
+                 data-name="0.3.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.1">0.3.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.3.0"
+                 data-name="0.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.3.0">0.3.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.2.3"
+                 data-name="0.2.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.2.3">0.2.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.2.2"
+                 data-name="0.2.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.2.2">0.2.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.2.1"
+                 data-name="0.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.2.1">0.2.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.2.0"
+                 data-name="0.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.2.0">0.2.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.1.1"
+                 data-name="0.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.1.1">0.1.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/0.1.0"
+                 data-name="0.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.1.0">0.1.0</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/bootstrap-tagsinput/bootstrap-tagsinput" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">bootstrap-tagsinput</span></a></span></span><span class="separator">/</span>
+  <span class="tooltipped tooltipped-e disabled text-muted" aria-label="You must be signed in to make or propose changes">
+    <span class="octicon octicon-plus"></span>
+  </span>
+</div>
+</div>
+
+
+
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/80b7c19616d64028bdcc90d440b2d778cd2609a9" data-pjax>
+        80b7c19
+      </a>
+      <time datetime="2015-11-17T00:58:50Z" is="relative-time">Nov 16, 2015</time>
+    </span>
+
+
+    <span class="commit-author-section">
+      <img alt="@lucknerjb" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/832836?v=3&amp;s=40" width="20" />
+      <a href="/lucknerjb" class="user-mention" rel="contributor">lucknerjb</a>
+    </span>
+
+        <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/80b7c19616d64028bdcc90d440b2d778cd2609a9" class="message" data-pjax="true" title="Merge pull request #425 from berniegp/css-input-focus
+
+Add 'focus' class to the container when it gains focus">Merge pull request</a> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/425" class="issue-link" title="Add 'focus' class to the container when it gains focus">#425</a> <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/80b7c19616d64028bdcc90d440b2d778cd2609a9" class="message" data-pjax="true" title="Merge pull request #425 from berniegp/css-input-focus
+
+Add 'focus' class to the container when it gains focus">from berniegp/css-input-focus</a>
+          <span class="hidden-text-expander inline">
+            <a href="#" class="js-details-target">…</a>
+          </span>
+    </span>
+
+      <div class="commit-desc"><pre class="text-small">Add 'focus' class to the container when it gains focus</pre></div>
+  </div>
+
+
+<div class="file-wrap">
+  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/80b7c19616d64028bdcc90d440b2d778cd2609a9" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/master/dist" class="js-directory-link js-navigation-open" id="2a6d07eef8b10b84129b42424ed99327-3841167361a24be3b43c5e214edd1f4a31815d22" title="dist">dist</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/8eed9fab4cd069249298ad1b56cab7b26c6571b9" class="message" data-pjax="true" title="Release 0.7.1">Release 0.7.1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T04:17:29Z" is="time-ago">Nov 10, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/master/examples" class="js-directory-link js-navigation-open" id="bfebe34154a0dfd9fc7b447fc9ed74e9-139cf60af4f56b03bbd700c0653d154cb927b7cf" title="examples">examples</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/0ea61cf05b6549634f057b3cf4987f1533cf1d36" class="message" data-pjax="true" title="Updaating examples index page on master branch to reflect gh-pages branch">Updaating examples index page on master branch to reflect gh-pages br…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T04:13:04Z" is="time-ago">Nov 10, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/master/src" class="js-directory-link js-navigation-open" id="25d902c24283ab8cfbac54dfa101ad31-4d605fa073212103660db0f470442b5d6b4fa4dc" title="src">src</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/80b7c19616d64028bdcc90d440b2d778cd2609a9" class="message" data-pjax="true" title="Merge pull request #425 from berniegp/css-input-focus
+
+Add 'focus' class to the container when it gains focus">Merge pull request</a> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/425" class="issue-link" title="Add 'focus' class to the container when it gains focus">#425</a> <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/80b7c19616d64028bdcc90d440b2d778cd2609a9" class="message" data-pjax="true" title="Merge pull request #425 from berniegp/css-input-focus
+
+Add 'focus' class to the container when it gains focus">from berniegp/css-input-focus</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-17T00:58:50Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/tree/master/test" class="js-directory-link js-navigation-open" id="098f6bcd4621d373cade4e832627b4f6-b13f12a10d08844920d8438bf90b2c632ec8af65" title="test">test</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/7e4254e49aa691690cbdf12a574075ba81b88d03" class="message" data-pjax="true" title="Add &#39;focus&#39; class to the container when it gains focus">Add 'focus' class to the container when it gains focus</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T17:35:46Z" is="time-ago">Nov 11, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/.gitignore" class="js-directory-link js-navigation-open" id="a084b794bc0759e7a6b77810e01874f2-6e19321f787cc5763492cf789df1eb04f81dcbd9" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/1f43a78037ec9c110eb2bd06fbee20500d18cf2c" class="message" data-pjax="true" title="small update to gitignore for local dev">small update to gitignore for local dev</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T04:02:03Z" is="time-ago">Nov 10, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/.travis.yml" class="js-directory-link js-navigation-open" id="354f30a63fb0907d4ad57269548329e3-555e156dffb0f3f7c20edc10cd84caaa66635597" title=".travis.yml">.travis.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/77a3a04da6abcb35852643a01ff3651dc31cbae1" class="message" data-pjax="true" title="Use bower for testing">Use bower for testing</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-08-01T20:04:23Z" is="time-ago">Aug 2, 2014</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/Gruntfile.js" class="js-directory-link js-navigation-open" id="35b4a816e0441e6a375cd925af50752c-ac84421ebadf94b300a22c4e4efaa4653ef364a3" title="Gruntfile.js">Gruntfile.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/322" class="issue-link" title="Download zip is nested like a matryoshka doll">#322</a> <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/53b4360c1d1668307374893100c1dcb496e04846" class="message" data-pjax="true" title="#322 - actual fix for recursive zip file">- actual fix for recursive zip file</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-03-25T22:43:02Z" is="time-ago">Mar 25, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/LICENSE" class="js-directory-link js-navigation-open" id="9879d6db96fd29134fc802214163b95a-58bc985bafabcbb3cbc6848bb00696a3199970f5" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/6caf82951a308d8721e2cda9eda5ed1e7edddf8a" class="message" data-pjax="true" title="License typo">License typo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-07-19T23:22:09Z" is="time-ago">Jul 20, 2013</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/README.md" class="js-directory-link js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-4f049701c93da611cecd46ff102d682e28fd1221" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/be96ad787f171fa70e48a6967025dc962f61f31b" class="message" data-pjax="true" title="Update README for release 0.7.1">Update README for release 0.7.1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T04:21:40Z" is="time-ago">Nov 10, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/bootstrap-tagsinput.jquery.json" class="js-directory-link js-navigation-open" id="e22c833389fa4b3b76cc036e1f805335-1916817e438a0ca905626707a29224e4b3410614" title="bootstrap-tagsinput.jquery.json">bootstrap-tagsinput.jquery.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/8eed9fab4cd069249298ad1b56cab7b26c6571b9" class="message" data-pjax="true" title="Release 0.7.1">Release 0.7.1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T04:17:29Z" is="time-ago">Nov 11, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/bower.json" class="js-directory-link js-navigation-open" id="0a08a7565aba4405282251491979bb6b-e44273c5f6753b66f9444e8b0d32585ad7208f32" title="bower.json">bower.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/28bfe3ece301e66e530e8b0e6fc5056cd34602e5" class="message" data-pjax="true" title="Release 0.5.0">Release 0.5.0</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-02-22T17:26:54Z" is="time-ago">Feb 22, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/karma.conf.js" class="js-directory-link js-navigation-open" id="a2a3b7b0c9c3b4b93b4aebf4e3ec3cfb-92f79381b1d5e6ee494b1afe5c9a61fd563a87a3" title="karma.conf.js">karma.conf.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/77a3a04da6abcb35852643a01ff3651dc31cbae1" class="message" data-pjax="true" title="Use bower for testing">Use bower for testing</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-08-01T20:04:23Z" is="time-ago">Aug 1, 2014</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bootstrap-tagsinput/bootstrap-tagsinput/blob/master/package.json" class="js-directory-link js-navigation-open" id="b9cfc7f2cdf78a7f4b91a753d10865a2-e3c28f8294cc630df10cbfcc7591ea86ec64b6f7" title="package.json">package.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bootstrap-tagsinput/bootstrap-tagsinput/commit/8eed9fab4cd069249298ad1b56cab7b26c6571b9" class="message" data-pjax="true" title="Release 0.7.1">Release 0.7.1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-11T04:17:29Z" is="time-ago">Nov 11, 2015</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-bootstrap-tags-input-" class="anchor" href="#bootstrap-tags-input-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bootstrap Tags Input <a href="https://travis-ci.org/bootstrap-tagsinput/bootstrap-tagsinput"><img src="https://camo.githubusercontent.com/f05ab233154b738877661ce3e6deb7687083fd30/68747470733a2f2f7472617669732d63692e6f72672f626f6f7473747261702d74616773696e7075742f626f6f7473747261702d74616773696e7075742e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/bootstrap-tagsinput/bootstrap-tagsinput.svg?branch=master" style="max-width:100%;"></a></h1>
+
+<p>Bootstrap Tags Input is a jQuery plugin providing a Twitter Bootstrap user interface for managing tags.</p>
+
+<p>Current stable version: <strong>v0.7.1</strong></p>
+
+<h2><a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Examples can be found <a href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/">here</a>.</p>
+
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Objects as tags</li>
+<li>True multi value</li>
+<li>Typeahead</li>
+<li>Designed for Bootstrap 2.3.2 and 3</li>
+</ul>
+
+<h3><a id="user-content-objects-as-tags" class="anchor" href="#objects-as-tags" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objects as tags</h3>
+
+<p>Not just support for using strings! This means you can use different values
+for a tag's label and value. Each tag also holds a reference to the object
+by which it was created, so by calling <code>tagsinput('items')</code> an
+array of the original items is returned.</p>
+
+<h3><a id="user-content-true-multi-value-support" class="anchor" href="#true-multi-value-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>True multi value support</h3>
+
+<p>Other implementations just concatenate the values to a comma separated string.
+This results in <code>val()</code> returning just this string, and when
+submitting the form, only one big, concatenated value is sent in the request.</p>
+
+<p>Bootstrap Tags Input provides true multivalue support. Just use a
+<code>&lt;select multiple /&gt;</code> as your input element, and
+<code>val()</code> will return an array of the tag values. When submitting the
+form, an array of values will be sent with the request.</p>
+
+<h3><a id="user-content-typeahead-support" class="anchor" href="#typeahead-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Typeahead support</h3>
+
+<p>Integrates with Twitter Bootstraps' 2.3.2 typeahead, or use custom typeahead when using Bootstrap 3.</p>
+
+<h2><a id="user-content-development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
+
+<p>Install dependencies:</p>
+
+<pre>npm install
+grunt install
+</pre>
+
+<p>Test:</p>
+
+<pre>grunt test
+</pre>
+
+<p>Build:</p>
+
+<pre>grunt build
+</pre>
+
+<p>Current Library Versions:</p>
+
+<ul>
+<li>Bootstrap: 3.3.5</li>
+<li>jQuery: 2.1.4</li>
+<li>Typeahead: 0.11.1</li>
+</ul>
+
+<p>Libraries for testing go in the <strong>/lib</strong> directory.</p>
+
+<h2><a id="user-content-history" class="anchor" href="#history" aria-hidden="true"><span class="octicon octicon-link"></span></a>History</h2>
+
+<ul>
+<li>0.7.1
+
+<ul>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/419">allowDuplicates not working</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/386">tag text appears when typeahead input looses focus</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/427">Remove duplicate method <code>removeAll</code> in manual</a></li>
+</ul></li>
+<li>0.7.0
+
+<ul>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/426">.tt-menu etc. styles should be included in bootstrap-tagsinput.css by default</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/422">Comma character carried over to new tag input when used as separator</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/399">Emails in multi select are being duplicated</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/369">The 'itemAdded' Event run on Load the Page!</a></li>
+</ul></li>
+<li>0.6.1
+
+<ul>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/371">Source maps fix</a></li>
+</ul></li>
+<li>0.6.0
+
+<ul>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/368">Allow form submissions when pressing enter if field is empty. Controlled by option</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/397">Ability to set different or multiple delimiters</a></li>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/405">No longer triggering itemRemoved when the field is already empty</a></li>
+</ul></li>
+<li>0.5
+
+<ul>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/298">Added an optional 3rd parameter to the "add" and "remove" methods</a></li>
+</ul></li>
+<li>0.4
+
+<ul>
+<li><a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/73">Fix typeahead when using Bootstrap 3</a></li>
+</ul></li>
+<li>0.3.13
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/5">#5: Trigger events on original input/select</a></li>
+<li> Loads of fixes merged with help of @janvt, @rlidwka and @kuraga: thanks for helping me out!</li>
+</ul></li>
+<li>0.3.9
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/48">#48: Type ahead stops when entering second character</a></li>
+</ul></li>
+<li>0.3.8
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/43">#43: Add support for placeholder</a></li>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/46">#46: ie 8 compatibility, replace indexOf method</a></li>
+</ul></li>
+<li>0.3.7
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/39">#39: flash when duplicate is entered</a></li>
+</ul></li>
+<li>0.3.6
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/34">#34: Error in ReloadPage</a></li>
+</ul></li>
+<li>0.3.5
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/10">#10: confirmKeys option</a></li>
+</ul></li>
+<li>0.3.4
+
+<ul>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/24">#24: Add bsTagsInput angular directive &amp; example for bootstrap3 with typeahea...</a></li>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/28">#28: Limit number of tags, enable/disable input</a></li>
+<li> <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/pull/33">#33: Avoid conflict with other selects when checking for value presence</a></li>
+</ul></li>
+</ul>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This project is licensed under <a href="https://raw.github.com/bootstrap-tagsinput/bootstrap-tagsinput/master/LICENSE" title="Read more about the MIT license">MIT</a>.</p>
+</article>
+  </div>
+
+
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+  </div>
+
+
+    </div>
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.06290s from github-fe130-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-7d180c2bb5779ecb7ab5d04ce8af999e73836dcf0df1a8c44b69c62a1de0732f.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-ce3f8ded64fca830a938a7c5546be8689fe08d3687cd71a9c03f141d37c6e409.js"></script>
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  </body>
+</html>
+

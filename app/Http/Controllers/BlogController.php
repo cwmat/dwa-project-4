@@ -26,7 +26,9 @@ class BlogController extends Controller
    */
   public function getCreate()
   {
-    return view("blog.create");
+    $tags = \App\Tag::orderBy('name','ASC')->get();
+
+    return view("blog.create")->with('tags', $tags);
   }
 
   /**

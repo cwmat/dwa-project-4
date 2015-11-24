@@ -9,7 +9,7 @@
 @stop
 
 @section('hero-image')
-  {{ asset('images/hero-main.jpg') }}
+  {{ asset('images/src/images.png') }}
 @stop
 
 @section('hero-heading')
@@ -32,7 +32,7 @@
               <h2 class="post-title">
                 {{ $blog->title }}
               </h2>
-              <img class="img-responsive blog-image" src= {{ $blog->image }} alt= {{ $blog->title }} >
+              <img class="img-responsive is-center" src= {{ $blog->image }} alt= {{ $blog->title }} >
               <h3 class="post-subtitle">
                 {{ $blog->content }}
               </h3>
