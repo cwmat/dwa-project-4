@@ -42,7 +42,14 @@
                 {{ $blog->content }}
               </h3>
             </a>
-            <p class="post-meta">Posted by <a href="#"> {{ $blog->user->name }} </a> on {{ $blog->created_at }} </p>
+            <p class="post-meta">
+              Posted by <a href="#"> {{ $blog->user->name }} </a> on {{ $blog->created_at }}
+              <span class="edit-button">
+                <a href="/blog/edit/{{$blog->id}}">
+                  <button type="button" class="btn btn-default btn-sm">Edit</button>
+                </a>
+              </span>
+            </p>
           </div>
           <hr>
         @endforeach
