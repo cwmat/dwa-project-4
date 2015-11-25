@@ -86,8 +86,18 @@ class BlogController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function getEdit()
+  public function getEdit($id = null)
   {
+    // Retreive blog using the id from the url
+    $blog = \App\Blog::find($id);
+
+    // Check to see if the blog post actually exists
+    if(is_null($book)) {
+      \Session::flash('flash_message','Blog post not found.');
+      return redirect('/');
+    }
+
+    // Return the edit view and pass the blog post obj with it
     return view("blog.edit");
   }
 
