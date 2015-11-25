@@ -5,7 +5,7 @@
       {{-- Yield errors from form validation TODO: Add Jquery validation here too --}}
       @include('errors.errors')
 
-      <form action="@yield('action')" method="post">
+      <form action="/blog/create" method="post">
         {!! csrf_field() !!}
 
         <fieldset class="form-group">
@@ -17,7 +17,7 @@
             id="title"
             maxlength="255"
             placeholder="Enter post title here"
-            value="@yield('title-value')">
+            value="{{ old('title') }}">
         </fieldset>
         <fieldset class="form-group">
           {{-- TODO: Add image preview also fix image issue when checkbox is hit --}}
@@ -29,7 +29,7 @@
             id="image-link"
             maxlength="255"
             placeholder="Paste a direct image link"
-            value="@yield('image-value')">
+            value="{{ old('image-link') }}">
         </fieldset>
         <fieldset class="form-group">
           <label for="content">Content</label>
@@ -39,14 +39,32 @@
             id="content"
             placeholder="Write something about your post"
             rows="5"
-            >@yield('content-value')</textarea>
+            >{{ old('content') }}</textarea>
         </fieldset>
 
         {{-- Tags foreach --}}
         <fieldset class="form-group">
           <label>Tags</label>
           <br>
-          @yield('tag-boxes')
+          @foreach($tags as $tag)
+            {{-- TODO: For some reason this is working, but not as intended --}}
+            <?php $resetCounter = 1; ?>
+
+            @if($resetCounter <= 3)
+              <input
+              type="checkbox"
+              name= {{ $tag->name }}
+              value= {{ $tag->name }}> {{ $tag->name }}
+              <?php $resetCounter++; ?>
+            @else
+              <br>
+              <input
+              type="checkbox"
+              name= {{ $tag->name }}
+              value= {{ $tag->name }}> {{ $tag->name }}
+              <?php $resetCounter = 0; ?>
+            @endif
+          @endforeach
         </fieldset>
 
         <button type="submit" class="btn btn-default">Submit</button>

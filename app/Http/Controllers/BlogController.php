@@ -88,17 +88,31 @@ class BlogController extends Controller
    */
   public function getEdit($id = null)
   {
-    // Retreive blog using the id from the url
-    $blog = \App\Blog::find($id);
+    // Retreive blog and tags using the id from the url
+    $blog = \App\Blog::with('tags')->find($id);
+    $tags = \App\Tag::orderBy('name','ASC')->get();
+    $blogTags = $blog->tags;
+    $currentTags = [];
+
+    // Put blog tags into an array
+    foreach ($blogTags as $tag) {
+      array_push($currentTags, $tag->name);
+    }
 
     // Check to see if the blog post actually exists
-    if(is_null($book)) {
+    if(is_null($blog)) {
       \Session::flash('flash_message','Blog post not found.');
       return redirect('/');
     }
 
-    // Return the edit view and pass the blog post obj with it
-    return view("blog.edit");
+    // dump($blog);
+
+    // Return the edit view and pass the blog post obj and tags with it
+    return view("blog.edit")->with([
+      'blog' => $blog,
+      'tags' => $tags,
+      'currentTags' => $currentTags
+    ]);
   }
 
   /**
@@ -108,7 +122,47 @@ class BlogController extends Controller
    */
   public function postEdit(Request $request)
   {
-    return("you made it to the post edit page");
+    // Query tag list
+    $tags = \App\Tag::orderBy('name','ASC')->get();
+
+    // Validate form fields
+    $this->validate(
+      $request,
+      [
+        'title' => 'required|min:1|max:255',
+        'image' => 'max:255',
+        'content' => 'max:4294967295',
+        // 'tags' => 'required|min:4',
+      ]
+    );
+
+    // Add entry to the database
+    $blog = \App\Blog::find($request->id);
+    $blog->title = $request->title;
+    $blog->image = $request->input("image-link");
+    $blog->content = $request->content;
+    $blog->user_id = 1; // TODO: Fix!
+
+    // Commit to database
+    $blog->save();
+
+    // Cycle through tags and commit ones that were clicked to the database
+    foreach ($tags as $tag) {
+      // Check if a tag in the database matches one checked in the request
+      $requestTag = $request->input($tag->name);
+      $outcome = isset($requestTag);
+
+      if (isset($requestTag)) {
+        // echo $tag->name;
+        // echo "<br>";
+        // TODO: Add code here that will commit to the DB
+      }
+    }
+
+    // Send flash message to destination
+    \Session::flash('flash_message','Your post was updated!');
+
+    return(redirect("/"));
   }
 
 
