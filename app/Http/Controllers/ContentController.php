@@ -17,7 +17,7 @@ class ContentController extends Controller
   public function getIndex()
   {
     // Query blog posts and order by updated at timestamp
-    $blogs = \App\Blog::with('user')->orderBy('updated_at','ASC')->get();
+    $blogs = \App\Blog::with('user')->orderBy('updated_at','DESC')->get();
 
     return view('content.content')->with('blogs', $blogs);
   }

@@ -26,6 +26,9 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+        {{-- Yield errors from form validation TODO: Add Jquery validation here too --}}
+        @include('errors.errors')
+
         <form action="/blog/create" method="post">
           {!! csrf_field() !!}
 
@@ -36,37 +39,40 @@
               class="form-control"
               name="title"
               id="title"
+              maxlength="255"
               placeholder="Enter post title here"
               value= {{ old('title') }}>
           </fieldset>
           <fieldset class="form-group">
+            {{-- TODO: Add image preview also fix image issue when checkbox is hit --}}
             <label for="image-link">Image Link</label>
             <input
               type="text"
               class="form-control"
               name="image-link"
               id="image-link"
+              maxlength="255"
               placeholder="Paste a direct image link"
               value= {{ old('image-link') }}>
           </fieldset>
           <fieldset class="form-group">
-            <label for="post-content">Content</label>
+            <label for="content">Content</label>
             <textarea
               class="form-control"
-              name="post-content"
-              id="post-content"
+              name="content"
+              id="content"
               placeholder="Write something about your post"
               rows="5"
-              >{{ old('post-content') }}</textarea>
+              >{{ old('content') }}</textarea>
           </fieldset>
 
           {{-- Tags foreach --}}
           <fieldset class="form-group">
-            <label for="post-tags">Image Link</label>
+            <label>Tags</label>
             <br>
 
               @foreach($tags as $tag)
-                {{-- Reset col every three tags --}}
+                {{-- TODO: For some reason this is working, but not as intended --}}
                 <?php $resetCounter = 1; ?>
 
                 @if($resetCounter <= 3)
@@ -85,25 +91,6 @@
                 @endif
               @endforeach
 
-
-            {{-- <input
-              type="button"
-              class="btn btn-info btn-xs"
-              name="post-tags"
-              id="post-tags"
-              value="Tag Name 1">
-            <input
-              type="button"
-              class="btn btn-info btn-xs"
-              name="post-tags"
-              id="post-tags"
-              value="Tag Name 2">
-            <input
-              type="button"
-              class="btn btn-info btn-xs"
-              name="post-tags"
-              id="post-tags"
-              value="Tag Name 3"> --}}
           </fieldset>
 
           <button type="submit" class="btn btn-default">Submit</button>

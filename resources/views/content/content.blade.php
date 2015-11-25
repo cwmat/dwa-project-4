@@ -32,7 +32,12 @@
               <h2 class="post-title">
                 {{ $blog->title }}
               </h2>
-              <img class="img-responsive is-center" src= {{ $blog->image }} alt= {{ $blog->title }} >
+              @if(isset($blog->image))
+                <img
+                  class="img-responsive is-center"
+                  src="{{ $blog->image }}"
+                  alt="{{ $blog->title }}" >
+              @endif
               <h3 class="post-subtitle">
                 {{ $blog->content }}
               </h3>

@@ -38,7 +38,47 @@ class BlogController extends Controller
    */
   public function postCreate(Request $request)
   {
-    return("you made it to the post create page");
+    // Query tag list
+    $tags = \App\Tag::orderBy('name','ASC')->get();
+
+    // Validate form fields
+    $this->validate(
+      $request,
+      [
+        'title' => 'required|min:1|max:255',
+        'image' => 'max:255|url',
+        'content' => 'max:4294967295',
+        // 'tags' => 'required|min:4',
+      ]
+    );
+
+    // Add entry to the database
+    $blog = new \App\Blog();
+    $blog->title = $request->title;
+    $blog->image = $request->input("image-link");
+    $blog->content = $request->content;
+    $blog->user_id = 1;
+
+    // Commit to database
+    $blog->save();
+
+    // Cycle through tags and commit ones that were clicked to the database
+    foreach ($tags as $tag) {
+      // Check if a tag in the database matches one checked in the request
+      $requestTag = $request->input($tag->name);
+      $outcome = isset($requestTag);
+
+      if (isset($requestTag)) {
+        // echo $tag->name;
+        // echo "<br>";
+        // TODO: Add code here that will commit to the DB
+      }
+    }
+
+    // Send flash message to destination
+    \Session::flash('flash_message','Your post was added!');
+
+    return(redirect("/"));
   }
 
   /**

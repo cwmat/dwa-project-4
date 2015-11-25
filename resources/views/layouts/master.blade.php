@@ -101,6 +101,13 @@ Sources:
     <!-- /.container -->
   </nav>
 
+  {{-- Flash message --}}
+  @if(\Session::has('flash_message'))
+    <div class='flash-message is-center'>
+      {{ \Session::get('flash_message') }}
+    </div>
+  @endif
+
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
   <header
