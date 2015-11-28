@@ -83,10 +83,10 @@ Sources:
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="index.html">Login</a>
+            <a href="/auth/login">Login</a>
           </li>
           <li>
-            <a href="about.html">Register</a>
+            <a href="/blog/create">Create</a>
           </li>
           <li>
             <a href="post.html">User Control Panel</a>

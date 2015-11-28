@@ -48,6 +48,21 @@ Route::post('/blog/edit', 'BlogController@postEdit');
 Route::get('/contact', 'ContactController@getIndex');
 
 /*
+ * Authentication
+ */
+ // Show login form
+ Route::get('auth/login', 'Auth\AuthController@getLogin');
+ // Process login form
+ Route::post('auth/login', 'Auth\AuthController@postLogin');
+ // Process logout
+ Route::get('auth/logout', 'Auth\AuthController@getLogout');
+ // Show registration form
+ Route::get('auth/register', 'Auth\AuthController@getRegister');
+ // Process registration form
+ Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+/*
  * Log viewer
  */
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
