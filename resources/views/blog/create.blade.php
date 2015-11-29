@@ -4,8 +4,8 @@
   Make a post
 @stop
 
-@section('head')
-  {{-- Page specific stylesheets --}}
+@section('pre-main-styles')
+  <link rel="stylesheet" href="{{ asset('bower/trumbowyg/dist/ui/trumbowyg.min.css') }}">
 @stop
 
 @section('hero-image')
@@ -96,4 +96,8 @@
       </div>
     </div>
   </div>
+@stop
+
+@section('extra-js')
+  <script src="{{ asset('bower/trumbowyg/dist/trumbowyg.min.js') }}"></script>
 @stop

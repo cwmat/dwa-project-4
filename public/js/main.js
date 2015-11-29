@@ -22,6 +22,12 @@ $(function() {
     $flashDiv.hide();
   }, 6001);
 
+  /*
+   *  Set content field as a WYSIWYG editor
+   *
+   *
+  */
+  $('#content').trumbowyg(); // TODO: make this only run on select pages to avoid errors
 
 
 

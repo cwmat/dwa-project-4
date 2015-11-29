@@ -44,6 +44,7 @@ Sources:
   <link href= {{ asset('bower/bootstrap/dist/css/bootstrap.min.css') }} rel="stylesheet">
 
   <!-- Themes and Custom CSS -->
+  @yield('pre-main-styles')
   <link href= {{ asset('css/theme.css') }} rel="stylesheet">
   <link rel="stylesheet" href= {{ asset('css/main.css') }} >
   {{-- Yield any page specific header content --}}
@@ -178,13 +179,17 @@ Sources:
   </footer>
 
   <!-- jQuery -->
-  <script src="bower/jquery/dist/jquery.min.js"></script>
+  <script src="{{ asset('bower/jquery/dist/jquery.min.js') }}"></script>
 
   <!-- Bootstrap Core JavaScript -->
-  <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="{{ asset('bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
   <!-- Custom Theme JavaScript -->
-  <script src="js/theme.js"></script>
+  {{-- TODO: Fix theme.js --}}
+  <script src="{{ asset('js/theme.js') }}"></script>
+
+  {{-- Extra JS --}}
+  @yield('extra-js')
 
   <!-- Main JS -->
   <script src="{{ asset('js/main.js') }}"></script>
