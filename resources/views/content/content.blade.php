@@ -42,9 +42,9 @@
             @endif
 
             {{-- Blog post content --}}
-            <h3 class="post-subtitle">
+            <p class="blog-content">
               {{ $blog->content }}
-            </h3>
+            </p>
 
             {{-- Blog post created/posted by --}}
             <p class="post-meta">
