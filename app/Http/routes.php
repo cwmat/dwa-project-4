@@ -23,24 +23,26 @@ Route::get('/', 'ContentController@getIndex');
 Route::get('/user', 'UserController@getIndex');
 //
 
-// Move to auth
 Route::get('/user/login', 'UserController@getLogin');
 Route::post('/user/login', 'UserController@postLogin');
 Route::get('/user/register', 'UserController@getRegister');
 Route::post('/user/register', 'UserController@postRegister');
-//
+
 
 /*
  * Blog pages (editing and posting)
  */
+// Redirect to main page if user manually enters this URL
 Route::get('/blog', 'BlogController@getIndex');
 
 // Add auth group
-Route::get('/blog/create', 'BlogController@getCreate');
-Route::post('/blog/create', 'BlogController@postCreate');
-Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
-Route::post('/blog/edit', 'BlogController@postEdit');
-//
+Route::group(['middleware' => 'auth'], function() {
+  Route::get('/blog/create', 'BlogController@getCreate');
+  Route::post('/blog/create', 'BlogController@postCreate');
+  Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
+  Route::post('/blog/edit', 'BlogController@postEdit');
+});
+
 
 /*
  * Contact page

@@ -91,13 +91,6 @@ class BlogController extends Controller
     // Retreive blog and tags using the id from the url
     $blog = \App\Blog::with('tags')->find($id);
     $tags = \App\Tag::orderBy('name','ASC')->get();
-    $blogTags = $blog->tags;
-    $currentTags = [];
-
-    // Put blog tags into an array
-    foreach ($blogTags as $tag) {
-      array_push($currentTags, $tag->name);
-    }
 
     // Check to see if the blog post actually exists
     if(is_null($blog)) {
@@ -105,7 +98,13 @@ class BlogController extends Controller
       return redirect('/');
     }
 
-    // dump($blog);
+    $blogTags = $blog->tags;
+    $currentTags = [];
+
+    // Put blog tags into an array
+    foreach ($blogTags as $tag) {
+      array_push($currentTags, $tag->name);
+    }
 
     // Return the edit view and pass the blog post obj and tags with it
     return view("blog.edit")->with([

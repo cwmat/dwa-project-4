@@ -76,15 +76,13 @@ Sources:
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="/">Home</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="/auth/login">Login</a>
-          </li>
+          @if(Auth::check())
           <li>
             <a href="/blog/create">Create</a>
           </li>
@@ -92,8 +90,19 @@ Sources:
             <a href="post.html">User Control Panel</a>
           </li>
           <li>
+            <a href="/auth/logout">Logout</a>
+          </li>
+          <li>
             <a href="contact.html">Contact</a>
           </li>
+          @else
+            <li>
+              <a href="/auth/login">Login</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          @endif
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -103,7 +112,7 @@ Sources:
 
   {{-- Flash message --}}
   @if(\Session::has('flash_message'))
-    <div class='flash-message is-center'>
+    <div class='flash-message'>
       {{ \Session::get('flash_message') }}
     </div>
   @endif
@@ -176,6 +185,9 @@ Sources:
 
   <!-- Custom Theme JavaScript -->
   <script src="js/theme.js"></script>
+
+  <!-- Main JS -->
+  <script src="{{ asset('js/main.js') }}"></script>
 
   <!-- Google Analytics -->
   <script>

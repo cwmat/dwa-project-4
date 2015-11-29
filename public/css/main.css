@@ -1,12 +1,35 @@
+/* Set maximum width for images in the blog */
 .blog-image {
   max-width: 5em;
 }
 
+/* Center items */
 .is-center {
+  text-align: center;
   align-content: center;
   margin: 0 auto;
 }
 
+/* Styles for the flash message */
 .flash-message {
-  opacity: 0.25;
+  opacity: 1.0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left:0;
+  padding: 1em 0;
+  z-index: 99;
+  -webkit-transition-property: opacity; /* Safari */
+  -webkit-transition-duration: 3s; /* Safari */
+  transition-property: opacity;
+  transition-duration: 3s;
+}
+
+/* Override bootstrap btn padding and margin */
+.btn {
+  padding: 2px 10px;
+  margin-left: 1em;
 }

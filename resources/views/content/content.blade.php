@@ -28,27 +28,41 @@
         {{-- Cycle through each blog post and post here --}}
         @foreach($blogs as $blog)
           <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                {{ $blog->title }}
-              </h2>
-              @if(isset($blog->image))
-                <img
-                  class="img-responsive is-center"
-                  src="{{ $blog->image }}"
-                  alt="{{ $blog->title }}" >
-              @endif
-              <h3 class="post-subtitle">
-                {{ $blog->content }}
-              </h3>
-            </a>
+            {{-- Blog post title --}}
+            <h2 class="post-title">
+              {{ $blog->title }}
+            </h2>
+
+            {{-- Check if image url exists then post it --}}
+            @if(isset($blog->image))
+              <img
+                class="img-responsive is-center"
+                src="{{ $blog->image }}"
+                alt="{{ $blog->title }}" >
+            @endif
+
+            {{-- Blog post content --}}
+            <h3 class="post-subtitle">
+              {{ $blog->content }}
+            </h3>
+
+            {{-- Blog post created/posted by --}}
             <p class="post-meta">
               Posted by <a href="#"> {{ $blog->user->name }} </a> on {{ $blog->created_at }}
-              <span class="edit-button">
-                <a href="/blog/edit/{{$blog->id}}">
-                  <button type="button" class="btn btn-default btn-sm">Edit</button>
-                </a>
-              </span>
+
+              {{-- If a suer is logged in, add the edit button --}}
+              @if(Auth::check())
+                <span class="edit-button">
+                  <a href="/blog/edit/{{$blog->id}}">
+                    <button
+                      type="button"
+                      class="btn btn-default btn-sm">
+                      Edit
+                    </button>
+                  </a>
+                </span>
+              @endif
+
             </p>
           </div>
           <hr>
