@@ -29,16 +29,26 @@
         @foreach($blogs as $blog)
           <div class="post-preview">
             {{-- Blog post title --}}
+            {{-- Check if link url exists then add link to title --}}
+            @if(isset($blog->link) && strlen($blog->link) > 0)
+              <a href="{{ $blog->link }}" target="_blank">
+            @endif
+
             <h2 class="post-title">
               {{ $blog->title }}
             </h2>
 
             {{-- Check if image url exists then post it --}}
-            @if(isset($blog->image))
+            @if(isset($blog->image) && strlen($blog->image) > 0)
               <img
                 class="img-responsive is-center"
                 src="{{ $blog->image }}"
                 alt="{{ $blog->title }}" >
+            @endif
+
+            {{-- Close anchor tag so image (if it exists) is in the link --}}
+            @if(isset($blog->link) && strlen($blog->link) > 0)
+              </a>
             @endif
 
             {{-- Blog post content --}}

@@ -47,6 +47,7 @@ class BlogController extends Controller
       [
         'title' => 'required|min:1|max:255',
         'image' => 'max:255|url',
+        'link' => 'max:255|url',
         'content' => 'max:4294967295',
         // 'tags' => 'required|min:4',
       ]
@@ -56,8 +57,9 @@ class BlogController extends Controller
     $blog = new \App\Blog();
     $blog->title = $request->title;
     $blog->image = $request->input("image-link");
+    $blog->link = $request->link;
     $blog->content = $request->content;
-    $blog->user_id = 1;
+    $blog->user_id = auth()->user()->id;
 
     // Commit to database
     $blog->save();
@@ -130,6 +132,7 @@ class BlogController extends Controller
       [
         'title' => 'required|min:1|max:255',
         'image' => 'max:255',
+        'link' => 'max:255|url',
         'content' => 'max:4294967295',
         // 'tags' => 'required|min:4',
       ]
@@ -139,8 +142,9 @@ class BlogController extends Controller
     $blog = \App\Blog::find($request->id);
     $blog->title = $request->title;
     $blog->image = $request->input("image-link");
+    $blog->link = $request->link;
     $blog->content = $request->content;
-    $blog->user_id = 1; // TODO: Fix!
+    // $blog->user_id = 1; // TODO: Fix!
 
     // Commit to database
     $blog->save();

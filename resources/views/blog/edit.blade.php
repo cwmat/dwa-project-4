@@ -58,6 +58,17 @@
               value="{{ old('image-link', $blog->image) }}">
           </fieldset>
           <fieldset class="form-group">
+            <label for="link">Hyperlink</label>
+            <input
+              type="text"
+              class="form-control"
+              name="link"
+              id="link"
+              maxlength="255"
+              placeholder="Paste a hyperlink"
+              value="{{ old('image-link', $blog->link) }}">
+          </fieldset>
+          <fieldset class="form-group">
             <label for="content">Content</label>
             <textarea
               class="form-control"
