@@ -81,30 +81,30 @@
 
           {{-- Tags foreach --}}
           <fieldset class="form-group">
-            <label>Tags</label>
+            <label for='tags'>Tags</label>
             <br>
-            @foreach($tags as $tag)
+            @foreach($tagsForCheckbox as $tag_id => $tag)
               {{-- TODO: For some reason this is working, but not as intended --}}
               <?php
               $resetCounter = 1;
               ?>
               {{-- Check which tags should be pre-checked --}}
-              {{ $checked = (in_array($tag->name, $currentTags)) ? 'checked' : '' }}
+              {{ $checked = (in_array($tag->name, $tagsForThisBlog)) ? 'checked' : '' }}
 
               @if($resetCounter <= 3)
                 <input
                 {{ $checked }}
                 type="checkbox"
-                name="{{ $tag->name }}"
-                value="{{ $tag->name }}"> {{ $tag->name }}
+                name="tags[]"
+                value="{{ $tag_id }}"> {{ $tag->name }}
                 <?php $resetCounter++; ?>
               @else
                 <br>
                 <input
                 {{ $checked }}
                 type="checkbox"
-                name="{{ $tag->name }}"
-                value="{{ $tag->name }}"> {{ $tag->name }}
+                name="tags[]"
+                value="{{ $tag_id }}"> {{ $tag->name }}
                 <?php $resetCounter = 0; ?>
               @endif
             @endforeach

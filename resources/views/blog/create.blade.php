@@ -78,24 +78,24 @@
 
           {{-- Tags foreach --}}
           <fieldset class="form-group">
-            <label>Tags</label>
+            <label for="tags">Tags</label>
             <br>
-            @foreach($tags as $tag)
+            @foreach($tagsForCheckbox as $tag)
               {{-- TODO: For some reason this is working, but not as intended --}}
               <?php $resetCounter = 1; ?>
 
               @if($resetCounter <= 3)
                 <input
                 type="checkbox"
-                name= {{ $tag->name }}
-                value= {{ $tag->name }}> {{ $tag->name }}
+                name="tags[]"
+                value= {{ $tag->id }}> {{ $tag->name }}
                 <?php $resetCounter++; ?>
               @else
                 <br>
                 <input
                 type="checkbox"
-                name= {{ $tag->name }}
-                value= {{ $tag->name }}> {{ $tag->name }}
+                name="tags[]"
+                value= {{ $tag->id }}> {{ $tag->name }}
                 <?php $resetCounter = 0; ?>
               @endif
             @endforeach

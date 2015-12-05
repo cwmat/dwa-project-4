@@ -26,9 +26,11 @@ class BlogController extends Controller
    */
   public function getCreate()
   {
-    $tags = \App\Tag::orderBy('name','ASC')->get();
+    # Get all the possible tags so we can include them with checkboxes in the view
+    $tagModel = new \App\Tag();
+    $tagsForCheckbox = $tagModel->getTagsForCheckboxes();
 
-    return view("blog.create")->with('tags', $tags);
+    return view("blog.create")->with('tagsForCheckbox', $tagsForCheckbox);
   }
 
   /**
@@ -64,18 +66,30 @@ class BlogController extends Controller
     // Commit to database
     $blog->save();
 
-    // Cycle through tags and commit ones that were clicked to the database
-    foreach ($tags as $tag) {
-      // Check if a tag in the database matches one checked in the request
-      $requestTag = $request->input($tag->name);
-      $outcome = isset($requestTag);
+    // // Cycle through tags and commit ones that were clicked to the database
+    // foreach ($tags as $tag) {
+    //   // Check if a tag in the database matches one checked in the request
+    //   $requestTag = $request->input($tag->name);
+    //   $outcome = isset($requestTag);
+    //
+    //   if (isset($requestTag)) {
+    //     // echo $tag->name;
+    //     // echo "<br>";
+    //     // TODO: Add code here that will commit to the DB
+    //   }
+    // }
 
-      if (isset($requestTag)) {
-        // echo $tag->name;
-        // echo "<br>";
-        // TODO: Add code here that will commit to the DB
-      }
+
+    // Commit tags to DB
+    if($request->tags) {
+      $tags = $request->tags;
     }
+    else {
+      $tags = [];
+    }
+    $blog->tags()->sync($tags);
+
+
 
     // Send flash message to destination
     \Session::flash('flash_message','Your post was added!');
@@ -92,7 +106,7 @@ class BlogController extends Controller
   {
     // Retreive blog and tags using the id from the url
     $blog = \App\Blog::with('tags')->find($id);
-    $tags = \App\Tag::orderBy('name','ASC')->get();
+    // $tags = \App\Tag::orderBy('name','ASC')->get();
 
     // Check to see if the blog post actually exists
     if(is_null($blog)) {
@@ -100,19 +114,36 @@ class BlogController extends Controller
       return redirect('/');
     }
 
-    $blogTags = $blog->tags;
-    $currentTags = [];
+    // $blogTags = $blog->tags;
+    // $currentTags = [];
 
     // Put blog tags into an array
-    foreach ($blogTags as $tag) {
-      array_push($currentTags, $tag->name);
+    // foreach ($blogTags as $tag) {
+      // array_push($currentTags, $tag->name);
+    // }
+
+    # Get all the possible tags so we can include them with checkboxes in the view
+    $tagModel = new \App\Tag();
+    $tagsForCheckbox = $tagModel->getTagsForCheckboxes();
+
+    /*
+    Create a simple array of just the tag names for tags associated with this book;
+    will be used in the view to decide which tags should be checked off
+    */
+    $tagsForThisBlog = [];
+    foreach($blog->tags as $tag) {
+        $tagsForThisBlog[] = $tag->name;
     }
+    # Results in an array like this: $tags_for_this_book['novel','fiction','classic'];
+
 
     // Return the edit view and pass the blog post obj and tags with it
     return view("blog.edit")->with([
       'blog' => $blog,
-      'tags' => $tags,
-      'currentTags' => $currentTags
+      // 'tags' => $tags,
+      'tagsForCheckbox' => $tagsForCheckbox,
+      'tagsForThisBlog' => $tagsForThisBlog,
+      // 'currentTags' => $currentTags
     ]);
   }
 
@@ -124,7 +155,7 @@ class BlogController extends Controller
   public function postEdit(Request $request)
   {
     // Query tag list
-    $tags = \App\Tag::orderBy('name','ASC')->get();
+    // $tags = \App\Tag::orderBy('name','ASC')->get();
 
     // Validate form fields
     $this->validate(
@@ -146,21 +177,30 @@ class BlogController extends Controller
     $blog->content = $request->content;
     // $blog->user_id = 1; // TODO: Fix!
 
-    // Commit to database
+    // Commit to DB
     $blog->save();
 
-    // Cycle through tags and commit ones that were clicked to the database
-    foreach ($tags as $tag) {
-      // Check if a tag in the database matches one checked in the request
-      $requestTag = $request->input($tag->name);
-      $outcome = isset($requestTag);
-
-      if (isset($requestTag)) {
-        // echo $tag->name;
-        // echo "<br>";
-        // TODO: Add code here that will commit to the DB
-      }
+    // Commit tags to DB
+    if($request->tags) {
+      $tags = $request->tags;
     }
+    else {
+      $tags = [];
+    }
+    $blog->tags()->sync($tags);
+
+    // // Cycle through tags and commit ones that were clicked to the database
+    // foreach ($tags as $tag) {
+    //   // Check if a tag in the database matches one checked in the request
+    //   $requestTag = $request->input($tag->name);
+    //   $outcome = isset($requestTag);
+    //
+    //   if (isset($requestTag)) {
+    //     // echo $tag->name;
+    //     // echo "<br>";
+    //     // TODO: Add code here that will commit to the DB
+    //   }
+    // }
 
     // Send flash message to destination
     \Session::flash('flash_message','Your post was updated!');
