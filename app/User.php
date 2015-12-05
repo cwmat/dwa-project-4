@@ -43,14 +43,4 @@ class User extends Model implements AuthenticatableContract,
       # Define a one-to-many relationship.
       return $this->hasMany('\App\Blog');
     }
-
-    /**
-     * The many to many roles relationship.
-     *
-     * @var array
-     */
-    public function roles()
-    {
-      return $this->belongsToMany('\App\Role')->withTimestamps();;
-    }
 }
