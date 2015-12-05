@@ -13,7 +13,7 @@ class BlogTagTableSeeder extends Seeder
     {
       // Array key is the blog title, value is an array of desired tags
       $blogs = [
-        "Blizzard 'stole' our source code, BOT maker says" => [
+        "Alienware x51 Review by CNET" => [
           'news',
           'technology',
           'games',
@@ -26,6 +26,10 @@ class BlogTagTableSeeder extends Seeder
         "Check out this neat cat!" => [
           'animals',
           'image',
+        ],
+        "Good catch!" => [
+          'animals',
+          'gif',
         ],
       ];
 

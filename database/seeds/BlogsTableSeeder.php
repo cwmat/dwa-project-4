@@ -11,6 +11,21 @@ class BlogsTableSeeder extends Seeder
      */
     public function run()
     {
+      // Dog catch
+      // Get user ID to link to blog post
+      $userID = \App\User::where('name', '=', 'Maple')->pluck('id');
+
+      // Temp blog post
+      DB::table('blogs')->insert([
+        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'user_id' => $userID,
+        'title' => 'Good catch!',
+        'content' => "Click the title for more dog gifs!",
+        'image' => 'http://i.imgur.com/tLcfR3A.gif',
+        'link' => 'https://www.reddit.com/r/doggifs/',
+      ]);
+
       // Cats
       // Get user ID to link to blog post
       $userID = \App\User::where('name', '=', 'Gina')->pluck('id');
@@ -23,6 +38,7 @@ class BlogsTableSeeder extends Seeder
         'title' => 'Check out this neat cat!',
         'content' => "Don't you just want to squish its face?!",
         'image' => 'https://i.imgur.com/k3lHKZP.jpg',
+        'link' => '',
       ]);
 
 
@@ -38,6 +54,7 @@ class BlogsTableSeeder extends Seeder
         'title' => "Sweet moves!",
         'content' => 'Wow, this guy looks guy looks totally crazed!',
         'image' => 'http://ak-hdl.buzzfed.com/static/2014-07/9/6/enhanced/webdr08/anigif_enhanced-5601-1404900076-6.gif',
+        'link' => '',
       ]);
 
 
@@ -51,9 +68,10 @@ class BlogsTableSeeder extends Seeder
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
         'user_id' => $userID,
-        'title' => "Blizzard 'stole' our source code, BOT maker says",
-        'content' => 'Blizzard Entertainment has obtained the source code of the popular Heroes of Storm cheating bot Stormbuddy. Facing a million dollar copyright infringement lawsuit, a freelance developer reportedly struck a deal with Blizzard.',
-        'image' => 'https://torrentfreak.com/images/stormbuddy.jpg',
+        'title' => "Alienware x51 Review by CNET",
+        'content' => '"The affordable Alienware X51 brings innovation to slim-tower PCs by offering a full-size graphics card" however, "Despite the big 3D card, the X51s slim-tower chassis still has a limited upgrade path."',
+        'image' => 'http://image.alienware.com/images/galleries/alienwarex51/gallery-shot_desktops_x51-r3_01.jpg',
+        'link' => 'http://www.cnet.com/products/alienware-x51-desktop/',
       ]);
     }
 }

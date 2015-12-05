@@ -11,28 +11,28 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-      // Make admin user.  Will eventually be admin once I add permissions
+      // Make admin user (1).  Will eventually be admin once I add permissions
       $user = \App\User::firstOrCreate(['email' => 'chaz@harvard.edu']);
       $user->name = 'Chaz';
       $user->email = 'chaz@harvard.edu';
       $user->password = \Hash::make('123fakestreet');
-      //$user->permission = 'admin';
+      $user->role = 1;
       $user->save();
 
-      // Make editor user.
+      // Make editor user (2).
       $user = \App\User::firstOrCreate(['email' => 'gina@harvard.edu']);
       $user->name = 'Gina';
       $user->email = 'gina@harvard.edu';
       $user->password = \Hash::make('123fakestreet');
-      //$user->permission = 'editor';
+      $user->role = 2;
       $user->save();
 
-      // Make poster user.
+      // Make poster user (3).
       $user = \App\User::firstOrCreate(['email' => 'maple@harvard.edu']);
       $user->name = 'Maple';
       $user->email = 'maple@harvard.edu';
       $user->password = \Hash::make('123fakestreet');
-      //$user->permission = 'poster';
+      $user->role = 3;
       $user->save();
     }
 }
