@@ -90,6 +90,12 @@ Sources:
           <li>
             <a href="post.html">{{ $user->name }}'s Control Panel</a>
           </li>
+          {{-- If user is admin add admin panel link --}}
+          @if($user->role == 1)
+            <li>
+              <a href="/admin-panel">Admin Panel</a>
+            </li>
+          @endif
           <li>
             <a href="/auth/logout">Logout</a>
           </li>

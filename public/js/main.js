@@ -15,12 +15,17 @@ $(function() {
   // Begin fade after 3 seconds
   setTimeout(function() {
     $flashDiv.css('opacity', 0.0);
-  }, 3000);
+  }, 2000);
 
   // Hide flash message completely after 6 seconds (3 sec to begin fade, 3 sec for fade)
   setTimeout(function() {
     $flashDiv.hide();
-  }, 6001);
+  }, 5001);
+
+  // Hide the flash message if the user hovers over the div
+  $flashDiv.hover(function() {
+    $flashDiv.hide();
+  });
 
   /*
    *  Set content field as a WYSIWYG editor

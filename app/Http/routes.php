@@ -50,11 +50,15 @@ Route::group(['middleware' => 'authedit'], function() {
 });
 
 /*
- * Blog pages (deleting)
+ * Admin pages
  */
 Route::group(['middleware' => 'authrole:1'], function() {
+  // Deleting
   Route::get('/blog/confirm-delete/{id?}', 'BlogController@getConfirmDelete');
   Route::get('/blog/delete/{id?}', 'BlogController@getDelete');
+  // Admin Panel
+  Route::get('/admin-panel', 'AdminController@getAdminPanel');
+  Route::post('/admin-panel', 'AdminController@postUpdateRoles');
 });
 
 /*
