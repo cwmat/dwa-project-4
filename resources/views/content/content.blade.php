@@ -60,8 +60,13 @@
             <p class="post-meta">
               Posted by <a href="#"> {{ $blog->user->name }} </a> on {{ $blog->created_at }}
 
-              {{-- If a suer is logged in, add the edit button --}}
-              @if(Auth::check())
+              {{-- If a user is logged in and has the right permissions, add the edit button --}}
+              @if(
+              // If the user is logged in and is the OP of the blog post
+              // or
+              // If the user is logged in and is an editor (2) or an admin (1)
+              (Auth::check() && $blog->user->id == $user->id) ||              (Auth::check() && $user->role <= 2)
+              )
                 <span class="edit-button">
                   <a href="/blog/edit/{{$blog->id}}">
                     <button

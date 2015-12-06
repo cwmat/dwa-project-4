@@ -88,7 +88,7 @@ Sources:
             <a href="/blog/create">Create</a>
           </li>
           <li>
-            <a href="post.html">User Control Panel</a>
+            <a href="post.html">{{ $user->name }}'s Control Panel</a>
           </li>
           <li>
             <a href="/auth/logout">Logout</a>

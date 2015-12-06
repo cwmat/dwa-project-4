@@ -17,7 +17,7 @@ class PracticeController extends Controller
     public function getIndex()
     {
       if (auth()->check()) {
-        dump(auth()->user()->role);
+        dump(auth()->user()->blog);
       }
     }
 }

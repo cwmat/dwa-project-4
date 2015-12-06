@@ -51,7 +51,6 @@ class BlogController extends Controller
         'image' => 'max:255|url',
         'link' => 'max:255|url',
         'content' => 'max:4294967295',
-        // 'tags' => 'required|min:4',
       ]
     );
 
@@ -65,20 +64,6 @@ class BlogController extends Controller
 
     // Commit to database
     $blog->save();
-
-    // // Cycle through tags and commit ones that were clicked to the database
-    // foreach ($tags as $tag) {
-    //   // Check if a tag in the database matches one checked in the request
-    //   $requestTag = $request->input($tag->name);
-    //   $outcome = isset($requestTag);
-    //
-    //   if (isset($requestTag)) {
-    //     // echo $tag->name;
-    //     // echo "<br>";
-    //     // TODO: Add code here that will commit to the DB
-    //   }
-    // }
-
 
     // Commit tags to DB
     if($request->tags) {
@@ -106,20 +91,12 @@ class BlogController extends Controller
   {
     // Retreive blog and tags using the id from the url
     $blog = \App\Blog::with('tags')->find($id);
-    // $tags = \App\Tag::orderBy('name','ASC')->get();
-
-    // Check to see if the blog post actually exists
-    if(is_null($blog)) {
-      \Session::flash('flash_message','Blog post not found.');
-      return redirect('/');
-    }
-
-    // $blogTags = $blog->tags;
-    // $currentTags = [];
-
-    // Put blog tags into an array
-    // foreach ($blogTags as $tag) {
-      // array_push($currentTags, $tag->name);
+    //
+    // Moved to middleware
+    // // Check to see if the blog post actually exists
+    // if(is_null($blog)) {
+    //   \Session::flash('flash_message','Blog post not found.');
+    //   return redirect('/');
     // }
 
     # Get all the possible tags so we can include them with checkboxes in the view
@@ -134,16 +111,12 @@ class BlogController extends Controller
     foreach($blog->tags as $tag) {
         $tagsForThisBlog[] = $tag->name;
     }
-    # Results in an array like this: $tags_for_this_book['novel','fiction','classic'];
-
 
     // Return the edit view and pass the blog post obj and tags with it
     return view("blog.edit")->with([
       'blog' => $blog,
-      // 'tags' => $tags,
       'tagsForCheckbox' => $tagsForCheckbox,
       'tagsForThisBlog' => $tagsForThisBlog,
-      // 'currentTags' => $currentTags
     ]);
   }
 
@@ -154,9 +127,6 @@ class BlogController extends Controller
    */
   public function postEdit(Request $request)
   {
-    // Query tag list
-    // $tags = \App\Tag::orderBy('name','ASC')->get();
-
     // Validate form fields
     $this->validate(
       $request,
@@ -165,7 +135,6 @@ class BlogController extends Controller
         'image' => 'max:255',
         'link' => 'max:255|url',
         'content' => 'max:4294967295',
-        // 'tags' => 'required|min:4',
       ]
     );
 
@@ -175,7 +144,6 @@ class BlogController extends Controller
     $blog->image = $request->input("image-link");
     $blog->link = $request->link;
     $blog->content = $request->content;
-    // $blog->user_id = 1; // TODO: Fix!
 
     // Commit to DB
     $blog->save();
@@ -189,126 +157,9 @@ class BlogController extends Controller
     }
     $blog->tags()->sync($tags);
 
-    // // Cycle through tags and commit ones that were clicked to the database
-    // foreach ($tags as $tag) {
-    //   // Check if a tag in the database matches one checked in the request
-    //   $requestTag = $request->input($tag->name);
-    //   $outcome = isset($requestTag);
-    //
-    //   if (isset($requestTag)) {
-    //     // echo $tag->name;
-    //     // echo "<br>";
-    //     // TODO: Add code here that will commit to the DB
-    //   }
-    // }
-
     // Send flash message to destination
     \Session::flash('flash_message','Your post was updated!');
 
     return(redirect("/"));
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function create()
-    // {
-    //     //
-    // }
-    //
-    // /**
-    //  * Store a newly created resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-    //
-    // /**
-    //  * Display the specified resource.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function show($id)
-    // {
-    //     //
-    // }
-    //
-    // /**
-    //  * Show the form for editing the specified resource.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function edit($id)
-    // {
-    //     //
-    // }
-    //
-    // /**
-    //  * Update the specified resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function update(Request $request, $id)
-    // {
-    //     //
-    // }
-    //
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy($id)
-    // {
-    //     //
-    // }
 }

@@ -39,10 +39,14 @@ Route::get('/blog', 'BlogController@getIndex');
 Route::group(['middleware' => 'auth'], function() {
   Route::get('/blog/create', 'BlogController@getCreate');
   Route::post('/blog/create', 'BlogController@postCreate');
+  // Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
+  // Route::post('/blog/edit', 'BlogController@postEdit');
+});
+
+Route::group(['middleware' => 'authedit'], function() {
   Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
   Route::post('/blog/edit', 'BlogController@postEdit');
 });
-
 
 /*
  * Contact page

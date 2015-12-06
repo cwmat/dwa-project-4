@@ -43,4 +43,18 @@ class User extends Model implements AuthenticatableContract,
       # Define a one-to-many relationship.
       return $this->hasMany('\App\Blog');
     }
+
+    public function getBlogPostIds()
+    {
+      # User has many Blogs
+      # Define a one-to-many relationship.
+      $blogPosts = $this->blog;
+      $blogIds = [];
+
+      foreach ($blogPosts as $blog) {
+        array_push($blogIds, $blog->id);
+      }
+
+      return $blogIds;
+    }
 }
