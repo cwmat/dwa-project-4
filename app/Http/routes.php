@@ -30,7 +30,7 @@ Route::post('/user/register', 'UserController@postRegister');
 
 
 /*
- * Blog pages (editing and posting)
+ * Blog pages (posting)
  */
 // Redirect to main page if user manually enters this URL
 Route::get('/blog', 'BlogController@getIndex');
@@ -39,13 +39,22 @@ Route::get('/blog', 'BlogController@getIndex');
 Route::group(['middleware' => 'auth'], function() {
   Route::get('/blog/create', 'BlogController@getCreate');
   Route::post('/blog/create', 'BlogController@postCreate');
-  // Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
-  // Route::post('/blog/edit', 'BlogController@postEdit');
 });
 
+/*
+ * Blog pages (editing)
+ */
 Route::group(['middleware' => 'authedit'], function() {
   Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
   Route::post('/blog/edit', 'BlogController@postEdit');
+});
+
+/*
+ * Blog pages (deleting)
+ */
+Route::group(['middleware' => 'authrole:1'], function() {
+  Route::get('/blog/confirm-delete/{id?}', 'BlogController@getConfirmDelete');
+  Route::get('/blog/delete/{id?}', 'BlogController@getDelete');
 });
 
 /*

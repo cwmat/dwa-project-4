@@ -68,11 +68,24 @@
               (Auth::check() && $blog->user->id == $user->id) ||              (Auth::check() && $user->role <= 2)
               )
                 <span class="edit-button">
-                  <a href="/blog/edit/{{$blog->id}}">
+                  <a href="/blog/edit/{{ $blog->id }}">
                     <button
                       type="button"
                       class="btn btn-default btn-sm">
                       Edit
+                    </button>
+                  </a>
+                </span>
+              @endif
+
+              {{-- If the user is an admin, add the delete button --}}
+              @if(Auth::check() && $user->role == 1)
+                <span class="delete-button">
+                  <a href="/blog/confirm-delete/{{ $blog->id }}">
+                    <button
+                      type="button"
+                      class="btn btn-default btn-sm">
+                      Delete
                     </button>
                   </a>
                 </span>

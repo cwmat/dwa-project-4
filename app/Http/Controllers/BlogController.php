@@ -104,7 +104,7 @@ class BlogController extends Controller
     $tagsForCheckbox = $tagModel->getTagsForCheckboxes();
 
     /*
-    Create a simple array of just the tag names for tags associated with this book;
+    Create a simple array of just the tag names for tags associated with this blog;
     will be used in the view to decide which tags should be checked off
     */
     $tagsForThisBlog = [];
@@ -162,4 +162,52 @@ class BlogController extends Controller
 
     return(redirect("/"));
   }
+
+  /**
+   * Confrim deletion.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function getConfirmDelete($blog_id = null)
+  {
+    $blog = \App\Blog::find($blog_id);
+
+    // If it does not, send to the mian page
+    if(is_null($blog)) {
+      \Session::flash('flash_message','Blog post not found.');
+      return redirect('/');
+    }
+
+    return view('blog.delete')->with('blog', $blog);
+  }
+
+  /**
+   * Process deletion.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function getDelete($blog_id = null)
+  {
+    // Get the blog to be deleted
+    $blog = \App\Blog::find($blog_id);
+
+    // If it does not, send to the mian page
+    if(is_null($blog)) {
+      \Session::flash('flash_message','Blog post not found.');
+      return redirect('/');
+    }
+
+    // Remove tags associated with this blog
+    if($blog->tags()) {
+        $blog->tags()->detach();
+    }
+
+    // Delete the blog
+    $blog->delete();
+
+    // Redirect to main page with a flash message
+    \Session::flash('flash_message',$blog->title.' was deleted.');
+    return redirect('/');
+  }
+
 }
