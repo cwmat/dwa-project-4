@@ -15,19 +15,8 @@
  * Index - Content/home page
  */
 Route::get('/', 'ContentController@getIndex');
-
-/*
- * User pages (login, register, control panel)
- */
-// Add auth group
-Route::get('/user', 'UserController@getIndex');
-//
-
-Route::get('/user/login', 'UserController@getLogin');
-Route::post('/user/login', 'UserController@postLogin');
-Route::get('/user/register', 'UserController@getRegister');
-Route::post('/user/register', 'UserController@postRegister');
-
+Route::get('/filter', 'ContentController@getFilter');
+Route::post('/filter', 'ContentController@postFilter');
 
 /*
  * Blog pages (posting)

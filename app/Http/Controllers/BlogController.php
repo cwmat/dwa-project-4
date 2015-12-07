@@ -26,7 +26,7 @@ class BlogController extends Controller
    */
   public function getCreate()
   {
-    # Get all the possible tags so we can include them with checkboxes in the view
+    // Get all the possible tags so we can include them with checkboxes in the view
     $tagModel = new \App\Tag();
     $tagsForCheckbox = $tagModel->getTagsForCheckboxes();
 

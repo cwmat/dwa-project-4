@@ -22,7 +22,44 @@ class ContentController extends Controller
     return view('content.content')->with('blogs', $blogs);
   }
 
-  // Add filter route
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function getFilter()
+  {
+    $tagModel = new \App\Tag();
+    $tagsForCheckbox = $tagModel->getTagsForCheckboxes();
+
+    return view('content.filter')->with('tagsForCheckbox', $tagsForCheckbox);
+  }
+
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function postFilter(Request $request)
+  {
+    // dump($request->tags);
+    $tagArray = [];
+    foreach ($request->tags as $thisTagId) {
+      $tagId = (int) $thisTagId;
+      array_push($tagArray, $tagId);
+    }
+
+    $blogPosts = \App\Blog::with('tags')->orderBy('updated_at', 'DESC')->whereHas('tags', function($query) use ($tagArray)
+    {
+      foreach ($tagArray as $tagId) {
+        $query->where('id', $tagId);
+      }
+    })->get();
+
+    dump($blogPosts);
+
+    return 'test';
+  }
 
 
 
