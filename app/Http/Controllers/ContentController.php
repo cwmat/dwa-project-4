@@ -44,21 +44,26 @@ class ContentController extends Controller
   {
     // dump($request->tags);
     $tagArray = [];
-    foreach ($request->tags as $thisTagId) {
-      $tagId = (int) $thisTagId;
-      array_push($tagArray, $tagId);
-    }
-
-    $blogPosts = \App\Blog::with('tags')->orderBy('updated_at', 'DESC')->whereHas('tags', function($query) use ($tagArray)
-    {
-      foreach ($tagArray as $tagId) {
-        $query->where('id', $tagId);
+    if ($request->tags) {
+      foreach ($request->tags as $thisTagId) {
+        $tagId = (int) $thisTagId;
+        array_push($tagArray, $tagId);
       }
-    })->get();
 
-    dump($blogPosts);
+      $blogs = \App\Blog::query();
 
-    return 'test';
+      foreach ($tagArray as $tagId) {
+        $blogs->orWhereHas('tags', function($query) use ($tagId) {
+          $query->where('tag_id', $tagId);
+        });
+      }
+      $blogs = $blogs->get();
+
+      return view('content.filtered')->with('blogs', $blogs);
+    } else {
+      \Session::flash('flash_message','No filter options were selected.');
+      return redirect('/filter');
+    }
   }
 
 
