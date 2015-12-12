@@ -47,13 +47,13 @@ $(function() {
 
   $imageLinkDiv.blur(function() {
     urlExists( $imageLinkDiv.val(), function(status) {
-      if (status === 200) {
-        var imageSrc = "<p>Image Preview</p><img src='" + $imageLinkDiv.val() + "' class='img-responsive'>"
+      if (status === 200 && $imageLinkDiv.val().length > 0) {
+        var imageSrc = "<h4>Image Preview</h4><img src='" + $imageLinkDiv.val() + "' class='img-responsive'>"
         $imagePreview.html(imageSrc);
       } else if ($imageLinkDiv.val().length === 0) {
-        // Do nothing
+        $imagePreview.html('<h4>Image Preview</h4><h6>No image URL has been given yet.</h6>');
       } else {
-        $imagePreview.html('<p class="btn btn-default">Image url is not valid!</p>');
+        $imagePreview.html('<h4>Image Preview</h4><h6>Image URL is not valid!</h6>');
       }
     });
   });

@@ -24,7 +24,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div id="image-container"><div id="image-preview"></div></div>
+        <div id="image-container"><div id="image-preview"><h4>Image Preview</h4><h6>No image URL has been given yet.</h6></div></div>
 
         {{-- Yield errors from form validation TODO: Add Jquery validation here too --}}
         @include('errors.errors')
