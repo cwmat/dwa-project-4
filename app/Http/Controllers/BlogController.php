@@ -91,15 +91,8 @@ class BlogController extends Controller
   {
     // Retreive blog and tags using the id from the url
     $blog = \App\Blog::with('tags')->find($id);
-    //
-    // Moved to middleware
-    // // Check to see if the blog post actually exists
-    // if(is_null($blog)) {
-    //   \Session::flash('flash_message','Blog post not found.');
-    //   return redirect('/');
-    // }
 
-    # Get all the possible tags so we can include them with checkboxes in the view
+    // Get all the possible tags so we can include them with checkboxes in the view
     $tagModel = new \App\Tag();
     $tagsForCheckbox = $tagModel->getTagsForCheckboxes();
 

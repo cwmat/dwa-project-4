@@ -49,14 +49,8 @@ class ContentController extends Controller
         array_push($tagArray, $tagId);
       }
 
-      $blogs = \App\Blog::query();
-
-      foreach ($tagArray as $tagId) {
-        $blogs->orWhereHas('tags', function($query) use ($tagId) {
-          $query->where('tag_id', $tagId);
-        });
-      }
-      $blogs = $blogs->get();
+      $blogModel = new \App\Blog();
+      $blogs = $blogModel->getPostsByTag($tagArray);
 
       return view('content.filtered')->with('blogs', $blogs);
     } else {
