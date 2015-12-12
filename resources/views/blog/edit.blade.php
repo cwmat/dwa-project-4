@@ -120,7 +120,5 @@
 
 @section('extra-js')
   <script src="{{ asset('bower/trumbowyg/dist/trumbowyg.min.js') }}"></script>
-  <script type="text/javascript">
-      $('#content').trumbowyg();
-  </script>
+  <script src="{{ asset('js/textarea.js') }}"></script>
 @stop

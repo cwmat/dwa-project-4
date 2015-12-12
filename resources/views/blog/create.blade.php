@@ -24,6 +24,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div id="image-container"><div id="image-preview"></div></div>
 
         {{-- Yield errors from form validation TODO: Add Jquery validation here too --}}
         @include('errors.errors')
@@ -111,7 +112,5 @@
 
 @section('extra-js')
   <script src="{{ asset('bower/trumbowyg/dist/trumbowyg.min.js') }}"></script>
-  <script type="text/javascript">
-      $('#content').trumbowyg();
-  </script>
+  <script src="{{ asset('js/textarea.js') }}"></script>
 @stop
