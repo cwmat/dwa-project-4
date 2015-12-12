@@ -88,7 +88,7 @@ Sources:
             <a href="/blog/create">Create</a>
           </li>
           <li>
-            <a href="post.html">{{ $user->name }}'s Control Panel</a>
+            <a href="/user">{{ $user->name }}'s Blog Posts</a>
           </li>
           {{-- If user is admin add admin panel link --}}
           @if($user->role == 1)
@@ -97,12 +97,18 @@ Sources:
             </li>
           @endif
           <li>
+            <a href="/filter">Filter Posts</a>
+          </li>
+          <li>
             <a href="/auth/logout">Logout</a>
           </li>
           <li>
             <a href="contact.html">Contact</a>
           </li>
           @else
+            <li>
+              <a href="/filter">Filter Posts</a>
+            </li>
             <li>
               <a href="/auth/login">Login</a>
             </li>

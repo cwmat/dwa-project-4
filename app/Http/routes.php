@@ -28,6 +28,7 @@ Route::get('/blog', 'BlogController@getIndex');
 Route::group(['middleware' => 'auth'], function() {
   Route::get('/blog/create', 'BlogController@getCreate');
   Route::post('/blog/create', 'BlogController@postCreate');
+  Route::get('/user', 'ContentController@getUser');
 });
 
 /*

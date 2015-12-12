@@ -12,28 +12,23 @@ $(function() {
   // Jquery obj for flash-message div
   var $flashDiv = $('div.flash-message');
 
-  // Begin fade after 3 seconds
+  // Begin fade after 1.5 seconds
   setTimeout(function() {
     $flashDiv.css('opacity', 0.0);
-  }, 2000);
+  }, 2500);
 
-  // Hide flash message completely after 6 seconds (3 sec to begin fade, 3 sec for fade)
+  // Hide flash message completely after 3.5 seconds (2.5 sec to begin fade, 1 sec for css fade)
   setTimeout(function() {
     $flashDiv.hide();
-  }, 5001);
+  }, 3500);
 
   // Hide the flash message if the user hovers over the div
-  $flashDiv.hover(function() {
-    $flashDiv.hide();
-  });
-
-  /*
-   *  Set content field as a WYSIWYG editor
-   *
-   *
-  */
-  $('#content').trumbowyg(); // TODO: make this only run on select pages to avoid errors
-
-
+  // $flashDiv.hover(function() {
+  //   $flashDiv.css('opacity', 0.0);
+  //
+  //   setTimeout(function() {
+  //     $flashDiv.hide();
+  //   }, 1000);
+  // });
 
 });

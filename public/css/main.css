@@ -18,14 +18,14 @@
   color: rgba(0, 0, 0, 1);
   text-align: center;
   position: fixed;
-  top: 0;
+  top: 7%;
   left:0;
   padding: 1em 0;
   z-index: 99;
   -webkit-transition-property: opacity; /* Safari */
-  -webkit-transition-duration: 3s; /* Safari */
+  -webkit-transition-duration: 1s; /* Safari */
   transition-property: opacity;
-  transition-duration: 3s;
+  transition-duration: 1s;
 }
 
 /* Override bootstrap btn padding and margin TODO: Fix this so it doesn't change the Submit size*/
