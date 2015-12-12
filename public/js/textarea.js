@@ -45,7 +45,7 @@ $(function() {
     });
   }
 
-  $imageLinkDiv.blur(function() {
+  var checkImageStatus = function() {
     urlExists( $imageLinkDiv.val(), function(status) {
       if (status === 200 && $imageLinkDiv.val().length > 0) {
         var imageSrc = "<h4>Image Preview</h4><img src='" + $imageLinkDiv.val() + "' class='img-responsive'>"
@@ -56,7 +56,17 @@ $(function() {
         $imagePreview.html('<h4>Image Preview</h4><h6>Image URL is not valid!</h6>');
       }
     });
+  }
+
+  // When docuemnt loads
+  checkImageStatus();
+
+  // And on subsequnet updates
+  $imageLinkDiv.blur(function() {
+    checkImageStatus();
   });
+
+
 
 
 });
