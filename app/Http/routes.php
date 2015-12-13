@@ -28,6 +28,7 @@ Route::get('/blog', 'BlogController@getIndex');
 Route::group(['middleware' => 'auth'], function() {
   Route::get('/blog/create', 'BlogController@getCreate');
   Route::post('/blog/create', 'BlogController@postCreate');
+  Route::post('/blog/edit', 'BlogController@postEdit');
   Route::get('/user', 'ContentController@getUser');
 });
 
@@ -36,7 +37,6 @@ Route::group(['middleware' => 'auth'], function() {
  */
 Route::group(['middleware' => 'authedit'], function() {
   Route::get('/blog/edit/{id?}', 'BlogController@getEdit');
-  Route::post('/blog/edit', 'BlogController@postEdit');
 });
 
 /*

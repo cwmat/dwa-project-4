@@ -13,11 +13,11 @@
 @stop
 
 @section('hero-heading')
-  Micro Blog
+  Brain Break
 @stop
 
 @section('hero-sub-heading')
-  Edit a post
+  Edit a Blog Post
 @stop
 
 @section('main-content')

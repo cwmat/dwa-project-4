@@ -13,11 +13,11 @@
 @stop
 
 @section('hero-heading')
-  Micro Blog
+  Brain Break
 @stop
 
 @section('hero-sub-heading')
-  Filter
+  Filter Content by Tags
 @stop
 
 @section('main-content')

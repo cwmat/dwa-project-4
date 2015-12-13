@@ -13,11 +13,11 @@
 @stop
 
 @section('hero-heading')
-  Micro Blog
+  Brain Break
 @stop
 
 @section('hero-sub-heading')
-  Testing the creation of a micro blog
+  Here are the Filtered Posts
 @stop
 
 @section('main-content')

@@ -13,7 +13,7 @@
 @stop
 
 @section('hero-heading')
-  Micro Blog
+  Brain Break
 @stop
 
 @section('hero-sub-heading')

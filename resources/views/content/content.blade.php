@@ -1,23 +1,23 @@
 @extends('layouts.master')
 
 @section('title')
-  Main Content
+  Brain Break
 @stop
 
 @section('head')
 
 @stop
 
-@section('hero-image')
+{{-- @section('hero-image')
   {{ asset('images/src/images.png') }}
-@stop
+@stop --}}
 
 @section('hero-heading')
-  Micro Blog
+  Brain Break
 @stop
 
 @section('hero-sub-heading')
-  Testing the creation of a micro blog
+  Take a break and see what your colleagues have been doing instead of working!
 @stop
 
 @section('main-content')

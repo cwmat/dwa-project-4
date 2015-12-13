@@ -21,6 +21,7 @@ class AuthEdit
         $blogsIds = auth()->user()->getBlogPostIds();
         // Parse the id from the URL - requires the path to have only 1 integer that corresponds to the blog id
         $requestId = (int) preg_replace('/\D/', '', $request->path());
+        dump($requestId);
 
         // Check that the blog post actually exists
         $blog = \App\Blog::find($requestId);

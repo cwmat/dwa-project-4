@@ -45,8 +45,9 @@ Sources:
 
   <!-- Themes and Custom CSS -->
   @yield('pre-main-styles')
-  <link href= {{ asset('css/theme.css') }} rel="stylesheet">
-  <link rel="stylesheet" href= {{ asset('css/main.css') }} >
+  <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/colors.css') }}">
   {{-- Yield any page specific header content --}}
   @yield('head')
 
@@ -132,9 +133,7 @@ Sources:
 
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header
-    class="intro-header"
-    style="background-image: url(@yield('hero-image'))">
+  <header class="intro-header @include('layouts.color_picker')">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

@@ -3,12 +3,6 @@
 // When docuemnt is ready:
 $(function() {
 
-
-  /*
-   *  Make the flash message dissapear after a few seconds
-   *
-   *
-  */
   // Jquery obj for flash-message div
   var $flashDiv = $('div.flash-message');
 
