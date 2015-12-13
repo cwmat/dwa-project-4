@@ -42,7 +42,7 @@
         <a href="/blog/edit/{{ $blog->id }}">
           <button
             type="button"
-            class="btn btn-default btn-sm">
+            class="btn btn-default btn-sm btn-xs">
             Edit
           </button>
         </a>
@@ -55,7 +55,7 @@
         <a href="/blog/confirm-delete/{{ $blog->id }}">
           <button
             type="button"
-            class="btn btn-default btn-sm">
+            class="btn btn-default btn-sm btn-xs">
             Delete
           </button>
         </a>

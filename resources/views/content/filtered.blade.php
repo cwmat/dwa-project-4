@@ -28,12 +28,6 @@
         @foreach($blogs as $blog)
           @include('content.blog_post')
         @endforeach
-        <!-- Pager -->
-        <ul class="pager">
-          <li class="next">
-            <a href="#">Older Posts &rarr;</a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

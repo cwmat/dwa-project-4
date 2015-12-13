@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-tagsinput",
-  "version": "0.7.1",
+  "version": "0.5.0",
   "homepage": "https://github.com/TimSchlechter/bootstrap-tagsinput",
   "authors": [
     "Tim Schlechter",
@@ -38,15 +38,5 @@
   },
   "resolutions": {
     "jquery": ">= 1.9.0"
-  },
-  "_release": "0.7.1",
-  "_resolution": {
-    "type": "version",
-    "tag": "0.7.1",
-    "commit": "024fe9d180a05d9f87ddcfb5f4b68162f6f895c3"
-  },
-  "_source": "git://github.com/TimSchlechter/bootstrap-tagsinput.git",
-  "_target": "~0.7.1",
-  "_originalSource": "bootstrap-tagsinput",
-  "_direct": true
+  }
 }

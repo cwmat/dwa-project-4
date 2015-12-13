@@ -68,6 +68,7 @@
               maxlength="255"
               placeholder="Paste a hyperlink"
               value="{{ old('image-link', $blog->link) }}">
+            <div id="hyper-error-container"><div id="hyper-error"></div></div>
           </fieldset>
           <fieldset class="form-group">
             <label for="content">Content</label>

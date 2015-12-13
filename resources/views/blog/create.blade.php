@@ -66,6 +66,7 @@
               placeholder="Paste a hyperlink"
               value="{{ old('link') }}">
           </fieldset>
+          <div id="hyper-error-container"><div id="hyper-error"></div></div>
           <fieldset class="form-group">
             <label for="content">Content</label>
             <textarea

@@ -66,7 +66,42 @@ $(function() {
     checkImageStatus();
   });
 
+  //
+  var $hyperError = $('#hyper-error');
+  var $linkDiv = $('#link');
+  var $hyperContainer = $('#hyper-error-container');
 
+  var fade = function(inputDiv) {
+    inputDiv.css('opacity', 1.0);
+
+    // Begin fade after 1.5 seconds
+    setTimeout(function() {
+      inputDiv.css('opacity', 0.0);
+    }, 5000);
+  }
+
+  var checkLinkStatus = function() {
+    urlExists( $linkDiv.val(), function(status) {
+      if (status === 200 && $linkDiv.val().length > 0) {
+        $hyperError.html('<div class="hyper-status-good">Hyperlink is valid and will be linked to this blog post\'s title.</div>');
+        // $hyperContainer.css('opacity', 1.0);
+        fade($hyperContainer);
+      } else if ($linkDiv.val().length === 0) {
+        $hyperError.html('<div class="hyper-status-none">Hyperlink has been removed and will no longer be included in this blog post.</div>');
+        // $hyperContainer.css('opacity', 1.0);
+        fade($hyperContainer);
+      } else {
+        $hyperError.html('<div class="hyper-status-fail">Hyperlink did not validate and will not be added to this blog post!</div>');
+        // $hyperContainer.css('opacity', 1.0);
+        fade($hyperContainer);
+      }
+    });
+  }
+
+  // And on subsequnet updates
+  $linkDiv.blur(function() {
+    checkLinkStatus();
+  });
 
 
 });

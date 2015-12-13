@@ -29,9 +29,8 @@
 }
 
 /* Override bootstrap btn padding and margin TODO: Fix this so it doesn't change the Submit size*/
-.btn {
+.btn-xs {
   padding: 2px 10px;
-  margin-left: 1em;
 }
 
 /* Override trumboyg */
@@ -93,6 +92,46 @@
   display: inline-block;
 }
 
-#image-preview h4 {
-  /*color: #8c6c92;*/
+.hyper-status-good {
+  font-size: 0.5em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  text-align: center;
+  color: green;
+  background-color: rgba(95,162,96,0.35);
+}
+
+.hyper-status-none {
+  font-size: 0.5em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #a2a515;
+  background-color: rgba(247,249,98,0.35);
+}
+
+.hyper-status-fail {
+  font-size: 0.5em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  text-align: center;
+  color: red;
+  background-color: rgba(251, 125, 125, 0.35);
+}
+
+#hyper-error-container {
+  opacity: 1.0;
+  -webkit-transition-property: opacity; /* Safari */
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+.post-preview > a.btn:hover,
+.post-preview > a.btn:focus {
+    text-decoration: none;
+    color: #F3F3F3;
 }
