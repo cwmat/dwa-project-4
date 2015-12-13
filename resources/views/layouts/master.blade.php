@@ -197,7 +197,6 @@ Sources:
   <script src="{{ asset('bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
   <!-- Custom Theme JavaScript -->
-  {{-- TODO: Fix theme.js --}}
   <script src="{{ asset('js/theme.js') }}"></script>
 
   {{-- Extra JS --}}

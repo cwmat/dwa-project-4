@@ -42,6 +42,7 @@ class ContentController extends Controller
    */
   public function postFilter(Request $request)
   {
+    // Unpack tag ids from request
     $tagArray = [];
     if ($request->tags) {
       foreach ($request->tags as $thisTagId) {
@@ -49,6 +50,7 @@ class ContentController extends Controller
         array_push($tagArray, $tagId);
       }
 
+      // Call blog model to get specified posts by tag id
       $blogModel = new \App\Blog();
       $blogs = $blogModel->getPostsByTag($tagArray);
 
@@ -66,6 +68,7 @@ class ContentController extends Controller
    */
   public function getUser()
     {
+      // Get blog posts by user id
       $blogs = \App\Blog::where('user_id', '=', auth()->user()->id)->get();
       return view('content.filtered')->with('blogs', $blogs);
     }

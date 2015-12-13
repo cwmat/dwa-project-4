@@ -75,8 +75,3 @@ Route::get('/contact', 'ContactController@getIndex');
  * Log viewer
  */
 Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-
-/*
- * Practice viewer
- */
-Route::get('/practice', 'PracticeController@getIndex');
