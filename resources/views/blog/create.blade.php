@@ -8,10 +8,6 @@
   <link rel="stylesheet" href="{{ asset('bower/trumbowyg/dist/ui/trumbowyg.min.css') }}">
 @stop
 
-@section('hero-image')
-  {{ asset('images/src/images.png') }}
-@stop
-
 @section('hero-heading')
   Brain Break
 @stop

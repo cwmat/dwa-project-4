@@ -8,10 +8,6 @@
 
 @stop
 
-{{-- @section('hero-image')
-  {{ asset('images/src/images.png') }}
-@stop --}}
-
 @section('hero-heading')
   Brain Break
 @stop

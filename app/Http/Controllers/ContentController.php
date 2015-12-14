@@ -72,4 +72,15 @@ class ContentController extends Controller
       $blogs = \App\Blog::where('user_id', '=', auth()->user()->id)->get();
       return view('content.filtered')->with('blogs', $blogs);
     }
+
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+ public function getAbout()
+  {
+    return view('content.about');
+  }
+  
 }

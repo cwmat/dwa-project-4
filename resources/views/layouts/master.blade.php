@@ -104,7 +104,7 @@ Sources:
             <a href="/auth/logout">Logout</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
+            <a href="/about">About</a>
           </li>
           @else
             <li>
@@ -114,7 +114,7 @@ Sources:
               <a href="/auth/login">Login</a>
             </li>
             <li>
-              <a href="contact.html">Contact</a>
+              <a href="/about">About</a>
             </li>
           @endif
         </ul>
@@ -160,23 +160,23 @@ Sources:
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <ul class="list-inline text-center">
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/charles-mateer-317bb649" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-linkedin-square fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="http://p1.cwmat-dwa.me/" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-home fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://github.com/cwmat/dwa-project-4" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>

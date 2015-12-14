@@ -17,6 +17,7 @@
 Route::get('/', 'ContentController@getIndex');
 Route::get('/filter', 'ContentController@getFilter');
 Route::post('/filter', 'ContentController@postFilter');
+Route::get('/about', 'ContentController@getAbout');
 
 /*
  * Blog pages (posting)
