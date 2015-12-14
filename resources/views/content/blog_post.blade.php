@@ -24,7 +24,7 @@
 
   {{-- Blog post content --}}
   <p class="blog-content">
-    {{ $blog->content }}
+    {!! $blog->content !!}
   </p>
 
   {{-- Blog post created/posted by --}}

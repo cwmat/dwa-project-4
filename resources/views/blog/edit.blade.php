@@ -73,7 +73,7 @@
               id="content"
               placeholder="Write something about your post"
               rows="5"
-              >{{ old('content', $blog->content) }}</textarea>
+              >{!! old('content', $blog->content) !!}</textarea>
           </fieldset>
 
           {{-- Tags foreach --}}
