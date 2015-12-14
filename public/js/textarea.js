@@ -36,7 +36,7 @@ $(function() {
   var urlExists = function(url, cb){
     jQuery.ajax({
         url:      url,
-        dataType: 'text',
+        dataType: 'jsonp',
         type:     'GET',
         complete:  function(xhr){
             if(typeof cb === 'function')
