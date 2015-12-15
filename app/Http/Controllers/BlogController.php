@@ -125,7 +125,7 @@ class BlogController extends Controller
       $request,
       [
         'title' => 'required|min:1|max:255',
-        'image' => 'max:255',
+        'image' => 'max:255|url',
         'link' => 'max:255|url',
         'content' => 'max:4294967295',
       ]
