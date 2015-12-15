@@ -14,7 +14,7 @@ The application utilizes a roles and permissions system containing three main ro
 Have fun posting some content!
 
 ### Link to screencast
-- [Screencast](TODO)
+- [Screencast](http://screencast.com/t/pkaefyfjpK)
 
 ### Professor/TA Details
 I will post an admin username and password so you can test it out when I submit.  
