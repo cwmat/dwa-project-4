@@ -13,7 +13,7 @@
 @stop
 
 @section('hero-sub-heading')
-  Take a break and see what your colleagues have been doing instead of working!
+  A Demo Micro Blog
 @stop
 
 @section('main-content')
